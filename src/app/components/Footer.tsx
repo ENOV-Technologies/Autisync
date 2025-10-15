@@ -1,8 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import CallToAction from "@/app/components/CallToAction";
-import AAnimation from "@/app/components/AAnimation";
-
 
 const navigation = {
     social: [
