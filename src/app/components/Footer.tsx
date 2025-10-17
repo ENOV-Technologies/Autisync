@@ -7,7 +7,7 @@ const navigation = {
         {
             name: "Facebook",
             href: "https://www.facebook.com/autisync",
-            icon: (props) => (
+            icon: (props: React.SVGProps<SVGSVGElement>) => (
                 <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
                     <path
                         fillRule="evenodd"
@@ -20,7 +20,7 @@ const navigation = {
         {
             name: "Instagram",
             href: "https://www.instagram.com/autisync__/",
-            icon: (props) => (
+            icon: (props: React.SVGProps<SVGSVGElement>) => (
                 <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
                     <path
                         fillRule="evenodd"
@@ -33,7 +33,7 @@ const navigation = {
         {
             name: "Linkedin",
             href: "https://www.linkedin.com/autisync",
-            icon: (props) => (
+            icon: (props: React.SVGProps<SVGSVGElement>) => (
                 <svg fill="currentColor" viewBox="0 0 21 15" {...props}>
                     <path
                         fillRule="evenodd"
@@ -46,7 +46,7 @@ const navigation = {
         {
             name: "Behance",
             href: "https://www.behance.net/ENOV-Technologies",
-            icon: (props) => (
+            icon: (props: React.SVGProps<SVGSVGElement>) => (
                 <svg fill="currentColor" viewBox="0 0 16 14" {...props}>
                     {" "}
                     <path
