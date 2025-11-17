@@ -89,16 +89,12 @@ export default function SEO() {
                     <div className="max-w-2xl mx-auto sm:text-center">
                         <h2 className="text-base font-semibold leading-7 text-[var(--autisync-gold,#B98B2F)]">Everything you need</h2>
                         <p className="mt-2 text-3xl font-bold tracking-tight text-gray-600 sm:text-4xl">A One Stop Shop</p>
-                        {/* <p className="mt-6 text-lg leading-8 text-gray-600">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste
-            dolor cupiditate blanditiis.
-          </p> */}
                     </div>
                 </div>
                 <div className="relative pt-16 overflow-hidden">
                     <div className="px-6 mx-auto max-w-7xl lg:px-8">
                         <Image
-                            src="/seos.webp"
+                            src="/seos.png"
                             alt="App screenshot"
                             className="mb-[-12%] rounded-xl shadow-2xl ring-1 ring-white/10"
                             width={2432}
