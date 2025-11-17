@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="1024" height="1024" viewBox="0 0 1024 1024" xml:space="preserve">
+<desc>Created with Fabric.js 2.3.6</desc>
+<defs>
+</defs>
+<rect x="-512" y="-512" rx="0" ry="0" width="1024" height="1024" style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(255,255,255); fill-opacity: 0; fill-rule: nonzero; opacity: 1;" transform="translate(512 512)"/>
+<linearGradient id="SVGID_8347" gradientUnits="userSpaceOnUse" x1="0" y1="41.574" x2="81.5" y2="41.574">
+<stop offset="0%" style="stop-color:rgb(248,54,0);stop-opacity: 1"/>
+<stop offset="100%" style="stop-color:rgb(249,212,35);stop-opacity: 1"/>
+</linearGradient>
+<path id="icon-1" d="M 2.06 80.01 V 64 H 0 v 18.148 h 80.314 V 64 h -2.06 v 16.01 z M 78.254 2.138 H 2.06 v 16.01 H 0 V 0 h 80.5 l -0.186 18.148 h -2.06 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 4; fill: url(#SVGID_8347); fill-rule: nonzero; opacity: 1;" transform="translate(513.455363 512) scale(6.873967 6.873967) translate(-40.25, -41.074) " stroke-linecap="round" />
+	<g id="text-1" transform="translate(512 511.577505) scale(3.307643 3.307643)">
+		<text xml:space="preserve" font-family="Autorich Sans" font-size="64" font-style="normal" font-weight="normal" style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1; white-space: pre;" ><tspan x="-124.56" y="20.10496" >GLOBUS</tspan></text>
+	</g>
+</svg>

@@ -1,16 +1,10 @@
-
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import {useState} from "react";
+import {AnimatePresence, motion} from "framer-motion";
+import {Menu, X} from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
-import { AnchorButton } from "@/app/components/AnchorButton"; // adjust if default export
-import {
-    ChartBarIcon,
-    CursorClickIcon,
-    ShieldCheckIcon,
-    ViewGridIcon,
-} from "@heroicons/react/outline";
+import {AnchorButton} from "@/app/components/AnchorButton"; // adjust if default export
+import {ChartBarIcon, CursorClickIcon, ShieldCheckIcon, ViewGridIcon,} from "@heroicons/react/outline";
 
 // Define solutions and callsToAction above the component
 const solutions = [
@@ -39,7 +33,7 @@ const solutions = [
         name: "Development Services",
         description:
             "Software Development Services | Web Development Services | Mobile Application Development | Custom Enterprise Solutions | Technology Integration Services | CMS Customization and Implementations",
-        href: "/solutions/devServices",
+        href: "/solutions/devServices/",
         icon: ViewGridIcon,
     },
 ];
@@ -88,10 +82,10 @@ export default function Navbar() {
                             <AnimatePresence>
                                 {flyoutOpen && (
                                     <motion.div
-                                        initial={{ opacity: 0, y: 10 }}
-                                        animate={{ opacity: 1, y: 0 }}
-                                        exit={{ opacity: 0, y: 10 }}
-                                        transition={{ duration: 0.2 }}
+                                        initial={{opacity: 0, y: 10}}
+                                        animate={{opacity: 1, y: 0}}
+                                        exit={{opacity: 0, y: 10}}
+                                        transition={{duration: 0.2}}
                                         className="absolute left-0 w-screen max-w-md mt-4 text-sm leading-6 bg-white shadow-lg ring-1 ring-gray-900/5"
                                     >
                                         <div className="p-4">
@@ -100,14 +94,15 @@ export default function Navbar() {
                                                     key={item.name}
                                                     className="relative flex p-4 rounded-lg group gap-x-6 hover:bg-gray-50"
                                                 >
-                                                    <div className="flex items-center justify-center flex-none mt-1 rounded-lg h-11 w-11 bg-gray-50 group-hover:bg-white" />
+                                                    <div
+                                                        className="flex items-center justify-center flex-none mt-1 rounded-lg h-11 w-11 bg-gray-50 group-hover:bg-white"/>
                                                     <div className="text-left">
                                                         <a
                                                             href={item.href}
                                                             className="font-semibold text-gray-900"
                                                         >
                                                             {item.name}
-                                                            <span className="absolute inset-0" />
+                                                            <span className="absolute inset-0"/>
                                                         </a>
                                                         <p className="mt-1 text-gray-600">
                                                             {item.description}
@@ -164,9 +159,9 @@ export default function Navbar() {
                     <div className="flex items-center md:hidden">
                         <button onClick={() => setIsOpen(!isOpen)}>
                             {isOpen ? (
-                                <X className="w-6 h-6" />
+                                <X className="w-6 h-6"/>
                             ) : (
-                                <Menu className="w-6 h-6" />
+                                <Menu className="w-6 h-6"/>
                             )}
                         </button>
                     </div>
@@ -177,9 +172,9 @@ export default function Navbar() {
             <AnimatePresence>
                 {isOpen && (
                     <motion.div
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: "auto", opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
+                        initial={{height: 0, opacity: 0}}
+                        animate={{height: "auto", opacity: 1}}
+                        exit={{height: 0, opacity: 0}}
                         className="bg-white border-t shadow-lg md:hidden"
                     >
                         <div className="px-4 py-4 space-y-4">
@@ -192,7 +187,8 @@ export default function Navbar() {
                             >
                                 Contact
                             </a>
-                            <button className="w-full px-4 py-2 text-white bg-blue-600 shadow rounded-xl hover:bg-blue-700">
+                            <button
+                                className="w-full px-4 py-2 text-white bg-blue-600 shadow rounded-xl hover:bg-blue-700">
                                 Sign In
                             </button>
                         </div>
