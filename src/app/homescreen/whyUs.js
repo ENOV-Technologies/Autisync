@@ -154,9 +154,8 @@ export default function WhyUs() {
                 </div>
 
                 {/* button */}
-                <button className="inline-flex justify-center px-4 py-2 mt-6 text-sm font-medium text-gray-50 bg-[var(--autisync-gold,#b98b2f)] border border-transparent rounded-md shadow-lg hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">
-                  <Link href="/servicepackage">Service Packages</Link>
-                </button>
+                  <Link href="/servicepackage"
+                        className="inline-flex justify-center px-4 py-2 mt-6 text-sm font-medium text-gray-50 bg-[var(--autisync-gold,#b98b2f)] border border-transparent rounded-md shadow-lg hover:bg-[#1C1C1C] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">Service Packages</Link>
               </div>
             </div>
           </div>

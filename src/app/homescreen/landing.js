@@ -143,7 +143,7 @@ export default function Landing() {
   return (
     <>
       {/* Service info */}
-      <div className="relative flex items-center content-center justify-center pt-24 pb-32 min-h-screen-75">
+      <div className="relative flex items-center content-center justify-center py-48 pb-32 min-h-screen-75">
         <div
           className="absolute top-0 w-full h-full bg-center bg-cover"
           style={{
@@ -175,9 +175,9 @@ export default function Landing() {
                 </p>
               </div>
               <br />
-              <button className="inline-flex justify-center px-4 py-2 text-sm font-medium text-white bg-[var(--autisync-gold,#b98b2f)] border border-transparent rounded-md shadow-lg hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">
-                <Link href={"/ServiceQuestionaire"}>Get Started with Us</Link>
-              </button>
+                <Link href={"/ServiceQuestionaire"}
+                      className="inline-flex justify-center px-4 py-2 text-sm font-medium text-white bg-[var(--autisync-gold,#b98b2f)] border border-transparent rounded-md shadow-lg hover:bg-[#1C1C1C] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
+                >Get Started with Us</Link>
             </div>
           </div>
         </div>
@@ -195,7 +195,7 @@ export default function Landing() {
                   <ServiceIcon3D gradient="from-[#fb7185] via-[#ef4444] to-[#b91c1c]">
                     <MarketingSeoIcon />
                   </ServiceIcon3D>
-                  <h6 className="text-xl font-semibold text-gray-700">
+                  <h6 className="text-xl font-semibold text-gray-800">
                     Marketing &amp; SEO
                   </h6>
                   <p className="mt-2 mb-4 text-gray-500">
@@ -214,7 +214,7 @@ export default function Landing() {
                   <ServiceIcon3D gradient="from-gray-200 via-gray-300 to-gray-400">
                     <WebDevIcon />
                   </ServiceIcon3D>
-                  <h6 className="text-xl font-semibold text-gray-700">
+                  <h6 className="text-xl font-semibold text-gray-800">
                     Web Development
                   </h6>
                   <p className="mt-2 mb-4 text-gray-500">
@@ -234,7 +234,7 @@ export default function Landing() {
                   <ServiceIcon3D gradient="from-[#fb7185] via-[#f97316] to-[#b45309]">
                     <ITSupportIcon />
                   </ServiceIcon3D>
-                  <h6 className="text-xl font-semibold text-gray-700">
+                  <h6 className="text-xl font-semibold text-gray-800">
                     IT Consultation / Technical Support
                   </h6>
                   <p className="mt-2 mb-4 text-gray-500">
@@ -254,7 +254,7 @@ export default function Landing() {
                   <ServiceIcon3D gradient="from-[#fde68a] via-[#facc15] to-[#b45309]">
                     <UiUxIcon />
                   </ServiceIcon3D>
-                  <h6 className="text-xl font-semibold text-gray-700">
+                  <h6 className="text-xl font-semibold text-gray-800">
                     UI/UX Design
                   </h6>
                   <p className="mt-2 mb-4 text-gray-500">
@@ -273,7 +273,7 @@ export default function Landing() {
                   <ServiceIcon3D gradient="from-gray-200 via-gray-300 to-gray-400">
                     <GraphicIcon />
                   </ServiceIcon3D>
-                  <h6 className="text-xl font-semibold text-gray-700">
+                  <h6 className="text-xl font-semibold text-gray-800">
                     Graphic Design
                   </h6>
                   <p className="mt-2 mb-4 text-gray-500">
@@ -293,7 +293,7 @@ export default function Landing() {
                   </ServiceIcon3D>
                 </div>
                 <div className="flex-auto px-4 pb-5">
-                  <h6 className="text-xl font-semibold text-gray-700">
+                  <h6 className="text-xl font-semibold text-gray-800">
                     Software / App Development
                   </h6>
                   <p className="mt-2 mb-4 text-gray-500">
@@ -312,7 +312,7 @@ export default function Landing() {
               <ServiceIcon3D gradient="from-gray-200 via-gray-300 to-gray-400">
                 <WhoWeAreIcon />
               </ServiceIcon3D>
-              <h3 className="mb-2 text-3xl font-semibold leading-normal text-gray-700">
+              <h3 className="mb-2 text-3xl font-semibold leading-normal text-gray-800">
                 Who Are We?
               </h3>
               <p className="mt-4 mb-4 leading-relaxed text-gray-600">
@@ -330,7 +330,7 @@ export default function Landing() {
               <Link
                 href="https://wa.me/+244927114400"
                 target="_blank"
-                className="mt-8 font-bold text-gray-700 hover:text-gray-500"
+                className="mt-8 font-bold text-gray-800 hover:text-gray-500"
               >
                 Get in touch with Sales
               </Link>
@@ -351,7 +351,7 @@ export default function Landing() {
                     viewBox="0 0 583 95"
                     className="absolute left-0 block w-full h-95-px -top-94-px"
                   >
-                    <polygon className="text-gray-700 fill-current"></polygon>
+                    <polygon className="text-gray-800 fill-current"></polygon>
                   </svg>
                   <h4 className="text-xl font-bold text-gray-600">
                     Seamless Services

@@ -165,7 +165,7 @@ export default function Packages() {
             Get a Proposal
           </Link>
           <Link
-            className="inline-flex justify-center px-4 py-2 text-sm font-medium text-gray-800 border border-gray-700 rounded-md shadow-lg hover:text-white hover:bg-gray-900 focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 sm:mr-2"
+            className="inline-flex justify-center px-4 py-2 text-sm font-medium text-gray-800 border border-gray-700 rounded-md shadow-lg hover:text-white hover:bg-[#1C1C1C] focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 sm:mr-2"
             href="/servicepackage/"
           >
             Other Packages
