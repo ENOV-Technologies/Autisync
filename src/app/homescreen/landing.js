@@ -331,19 +331,20 @@ export default function Landing() {
                 Who Are We?
               </h3>
               <p className="mt-4 mb-4 leading-relaxed text-gray-600">
-                We are a value-adding service provider of professional software
-                and graphic designing services based in Windhoek, Namibia. We
-                develop mobile applications and websites that automate our
-                clients&apos; daily functions.
+                At AutiSync, we transform businesses through intelligent automation, premium
+                digital experiences, and seamless technology systems. We turn complex problems
+                into simple, scalable solutions — helping brands save time, increase
+                efficiency, and grow faster.
               </p>
+
               <p className="mt-0 mb-4 leading-relaxed text-gray-600">
-                We offer IT technical support services to allow our clients to
-                go about their daily business activities uninterrupted. We
-                design and develop solutions that offer you seamless ease in
-                business operations.
+                Whether you need AI-powered workflows, custom software, a branded website,
+                CRM setup, or ongoing tech support — we build systems that work together,
+                operate smoothly, and elevate your entire business. We’re not just a service
+                provider. We’re your long-term technology partner.
               </p>
               <Link
-                href="https://wa.me/+244927114400"
+                href="https://wa.me/+447883317646"
                 target="_blank"
                 className="mt-8 font-bold text-gray-800 hover:text-[var(--autisync-gold,#b98b2f)]/90"
               >

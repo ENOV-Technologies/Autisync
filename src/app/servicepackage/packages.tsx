@@ -159,7 +159,7 @@ export default function Packages() {
       <div className="object-none object-center max-w-4xl p-4 mx-auto text-center">
         <Link
           className="inline-flex justify-center px-4 py-2 text-sm font-medium text-white bg-[#3B3B3B] border border-transparent rounded-md shadow-lg hover:bg-[#B28228] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#B28228] sm:mr-2"
-          href="/ServiceQuestionaire/"
+          href="/contact/"
         >
           Get a Proposal
         </Link>
