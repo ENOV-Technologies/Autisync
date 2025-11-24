@@ -10,10 +10,10 @@ function ServiceIcon3D({ children, gradient }) {
         className={`
           flex items-center justify-center w-14 h-14 rounded-full
           bg-gradient-to-br ${gradient}
-          shadow-[0_14px_30px_rgba(0,0,0,0.35)]
+          shadow-[0_14px_30px_rgba(0,0,0,0.35)]/30
           border border-white/10
           transition-transform duration-300 ease-out
-          group-hover:scale-105 group-hover:shadow-[0_18px_40px_rgba(0,0,0,0.45)]
+          group-hover:scale-105 group-hover:shadow-[0_18px_40px_rgba(0,0,0,0.45)]/30
         `}
       >
         <div
@@ -345,7 +345,7 @@ export default function Landing() {
               <Link
                 href="https://wa.me/+244927114400"
                 target="_blank"
-                className="mt-8 font-bold text-gray-800 hover:text-gray-500"
+                className="mt-8 font-bold text-gray-800 hover:text-[var(--autisync-gold,#b98b2f)]/90"
               >
                 Get in touch with Sales
               </Link>

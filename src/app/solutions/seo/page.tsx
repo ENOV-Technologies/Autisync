@@ -134,7 +134,7 @@ export default function SEO() {
             <div className="flex flex-wrap items-center mt-8 gap-4">
               <Link
                 href="/servicepackage"
-                className="px-5 py-2.5 text-sm font-semibold text-white bg-[#1C1C1C] rounded-md shadow hover:bg-[var(--autisync-gold,#B98B2F)] hover:shadow-lg transition"
+                className="px-5 py-2 text-sm text-white bg-[#1C1C1C] rounded-md shadow hover:bg-[var(--autisync-gold,#B98B2F)] hover:shadow-lg transition"
               >
                 Explore Service Packages
               </Link>
@@ -371,13 +371,13 @@ export default function SEO() {
               <Link
                 href="https://wa.me/+244927114400"
                 target="_blank"
-                className="rounded-md group bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-200 hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                className="rounded-md group bg-white px-3.5 py-2.5 text-sm text-gray-900 shadow-sm hover:bg-gray-200 hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
               >
                 Call Us <span className="group-hover:text-[var(--autisync-gold,#B98B2F)]">(WhatsApp)</span>
               </Link>
               <Link
                 href="/contact"
-                className="text-sm font-semibold leading-6 text-gray-50 hover:text-[var(--autisync-gold,#B98B2F)]"
+                className="text-sm leading-6 font-semibold text-gray-50 hover:text-[var(--autisync-gold,#B98B2F)]"
                 >
                 Book a Consultation <span aria-hidden="true">→</span>
                 </Link>

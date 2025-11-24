@@ -159,13 +159,13 @@ export default function Packages() {
 
         <div className="object-none object-center max-w-4xl p-4 mx-auto text-center">
           <Link
-            className="inline-flex justify-center px-4 py-2 text-sm font-medium text-white bg-[var(--autisync-gold,#b98b2f)] border border-transparent rounded-md shadow-lg hover:bg-yellow-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500 sm:mr-2"
+            className="inline-flex justify-center px-4 py-2 text-sm font-medium text-white bg-[var(--autisync-gold,#b98b2f)] border border-transparent rounded-md shadow-lg hover:bg-yellow-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500 sm:mr-2 transition-all hover:shadow-[0_16px_30px_rgba(0,0,0,0.18)]/10"
             href="/ServiceQuestionaire/"
           >
             Get a Proposal
           </Link>
           <Link
-            className="inline-flex justify-center px-4 py-2 text-sm font-medium text-gray-800 border border-gray-700 rounded-md shadow-lg hover:text-white hover:bg-[#1C1C1C] focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 sm:mr-2"
+            className="inline-flex justify-center px-4 py-2 text-sm font-medium text-gray-800 border border-gray-700 rounded-md shadow-lg hover:text-white hover:bg-[#1C1C1C] focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 sm:mr-2 transition-all hover:shadow-[0_16px_30px_rgba(0,0,0,0.18)]/10"
             href="/servicepackage/"
           >
             Other Packages

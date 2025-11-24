@@ -87,7 +87,7 @@ export default function CreativeDesign() {
                         </p>
                         <br />
                         <Link
-                            className="px-4 py-2 mb-1 text-xs font-bold text-white uppercase transition-all duration-150 ease-linear bg-gray-900 rounded shadow outline-none hover:bg-[var(--autisync-gold,#B98B2F)] hover:shadow-md focus:outline-none sm:mr-2"
+                            className="px-4 py-3 mb-1 text-xs text-white uppercase transition-all duration-150 ease-linear bg-gray-900 rounded shadow outline-none hover:bg-[var(--autisync-gold,#B98B2F)] hover:shadow-md focus:outline-none sm:mr-2 transition-all hover:shadow-[0_16px_30px_rgba(0,0,0,0.18)]/10"
                             href="/servicepackage/"
                         >
                             Check out Our Packages
@@ -203,7 +203,7 @@ export default function CreativeDesign() {
                                 <Link
                                     href="https://wa.me/+244927114400"
                                     target="_blank"
-                                    className="group rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-[#1C1C1C] hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                                    className="group rounded-md bg-white px-3.5 py-2.5 text-sm text-gray-900 shadow-sm hover:bg-[#1C1C1C] hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
                                 >
                                     Call Us{" "}
                                     <span className="group-hover:text-[var(--autisync-gold,#B98B2F)] ">

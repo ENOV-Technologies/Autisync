@@ -113,12 +113,13 @@ export default function DevService() {
                             project.
                         </p>
                         <br/>
-                        <button
-                            className="px-4 py-2 mb-1 text-xs text-white uppercase transition-all duration-150 ease-linear bg-[var(--autisync-gold,#B98B2F)] rounded shadow outline-none hover:bg-gray-900 hover:shadow-md focus:outline-none sm:mr-2"
+                        <Link
+                            className="px-4 py-3 mb-1 text-xs text-white uppercase transition-all duration-150 ease-linear bg-[var(--autisync-gold,#B98B2F)] rounded shadow outline-none hover:bg-gray-900 hover:shadow-md focus:outline-none sm:mr-2 transition-all hover:shadow-[0_16px_30px_rgba(0,0,0,0.18)]/10"
                             type="button"
+                             href="/servicepackage/"
                         >
-                            <Link href="/servicepackage/">Checkout Our Packages</Link>
-                        </button>
+                                Checkout Our Packages
+                        </Link>
                     </div>
                     <div className="flex max-w-2xl mx-auto mt-16 sm:mt-24 lg:ml-10 lg:mr-0 lg:mt-0 lg:max-w-none lg:flex-none xl:ml-32">
                         <div className="flex-none max-w-3xl sm:max-w-5xl lg:max-w-none">
@@ -230,7 +231,7 @@ export default function DevService() {
                             <Link
                                 href="tel:+244927114400"
                                 target="_blank"
-                                className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-md hover:bg-gray-800 hover:text-gray-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white hover:shadow-lg"
+                                className="rounded-md bg-white px-3.5 py-2.5 text-sm text-gray-900 shadow-md hover:bg-gray-800 hover:text-gray-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white hover:shadow-lg transition-all hover:shadow-[0_16px_30px_rgba(0,0,0,0.18)]/10"
                             >
                                 Give Us a Call
                             </Link>

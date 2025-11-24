@@ -125,7 +125,7 @@ export default function Example() {
                                 </p>
                                 <br />
                                 <Link
-                                    className="px-4 py-2 mb-1 text-xs font-bold text-white uppercase transition-all duration-150 ease-linear bg-[var(--autisync-gold,#B98B2F)] rounded shadow outline-none hover:bg-gray-900 hover:shadow-md focus:outline-none sm:mr-2"
+                                    className="px-4 py-3 mb-1 text-xs  text-white uppercase transition-all duration-150 ease-linear bg-[var(--autisync-gold,#B98B2F)] rounded shadow outline-none hover:bg-gray-900 hover:shadow-md focus:outline-none sm:mr-2"
                                     href="/servicepackage/"
                                 >
                                     Checkout Our Packages

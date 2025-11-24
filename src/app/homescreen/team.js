@@ -15,7 +15,7 @@ export default function Landing() {
                 ultimate goal is customer satisfaction. We have a dedicated team
                 of collaborators committed to ensuring your success.
               </p>
-                <Link href={"/about"} className="inline-flex justify-center px-4 py-2 text-sm font-medium hover:text-gray-50 text-[var(--autisync-gold,#b98b2f)] bg-gray-50 border border-transparent rounded-md shadow-lg hover:bg-[var(--autisync-gold,#b98b2f)] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">
+                <Link href={"/about"} className="inline-flex justify-center px-4 py-2 text-sm font-medium hover:text-gray-50 text-[var(--autisync-gold,#b98b2f)] bg-gray-50 border border-transparent rounded-md shadow-lg hover:bg-[var(--autisync-gold,#b98b2f)] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 transition-all hover:shadow-[0_16px_30px_var(--autisync-gold,#b98b2f)]/10">
                   Meet the Team
                 </Link>
             </div>

@@ -18,7 +18,7 @@ function ServiceIcon3D({
         className={`
           flex items-center justify-center w-14 h-14 rounded-full
           bg-gradient-to-br ${gradient}
-          shadow-[0_14px_30px_rgba(0,0,0,0.35)]
+          shadow-[0_14px_30px_rgba(0,0,0,0.35)]/30
           border border-white/10
           transition-transform duration-300 ease-out
           group-hover:scale-105 group-hover:shadow-[0_18px_40px_rgba(0,0,0,0.45)]/40
@@ -663,10 +663,10 @@ export default function AboutPage() {
             goals
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-              <Link href="/contact" className="px-6 py-2 text-white bg-[var(--autisync-gold,#b98b2f)] rounded-md shadow-lg hover:bg-gray-900 transition-all hover:shadow-[0_16px_30px_rgba(0,0,0,0.25)]">
+              <Link href="/contact" className="px-6 py-2 text-white bg-[var(--autisync-gold,#b98b2f)] rounded-md shadow-lg hover:bg-gray-900 transition-all hover:shadow-[0_16px_30px_rgba(0,0,0,0.25)]/10">
                 Get in Touch
             </Link>
-              <Link href="/servicepackage" className="px-6 py-2 text-gray-700 bg-gray-100 rounded-md shadow-lg hover:bg-gray-200 transition-all hover:shadow-[0_16px_30px_rgba(0,0,0,0.18)]">
+              <Link href="/servicepackage" className="px-6 py-2 text-gray-700 bg-gray-100 rounded-md shadow-lg hover:bg-gray-200 transition-all hover:shadow-[0_16px_30px_rgba(0,0,0,0.18)]/10">
                 View Our Services
             </Link>
           </div>
