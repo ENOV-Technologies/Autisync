@@ -374,7 +374,7 @@ export default function AboutPage() {
           <div className="flex flex-wrap items-center">
             {/* Text + badge */}
             <div className="w-full px-4 ml-auto mr-auto md:w-5/12 group">
-              <ServiceIcon3D gradient="from-gray-200 via-gray-300 to-gray-400">
+              <ServiceIcon3D gradient="from-[#1C1C1C] via-[#2a2a2a] to-[#000000]">
                 <BookIcon className="w-6 h-6 text-[var(--autisync-gold,#B98B2F)]" />
               </ServiceIcon3D>
 

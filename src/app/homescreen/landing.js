@@ -324,7 +324,7 @@ export default function Landing() {
           <div className="flex flex-wrap items-center mt-32">
             {/* who we are section */}
             <div className="w-full px-4 ml-auto mr-auto md:w-5/12 group">
-              <ServiceIcon3D gradient="from-gray-200 via-gray-300 to-gray-400">
+              <ServiceIcon3D gradient="from-[#1C1C1C] via-[#2a2a2a] to-[#000000]">
                 <WhoWeAreIcon className="w-6 h-6 text-[var(--autisync-gold,#b98b2f)]" />
               </ServiceIcon3D>
               <h3 className="mb-2 text-3xl font-semibold leading-normal text-gray-800 transition-colors duration-200 group-hover:text-gray-900">
