@@ -21,7 +21,7 @@ function ServiceIcon3D({
           shadow-[0_14px_30px_rgba(0,0,0,0.35)]
           border border-white/10
           transition-transform duration-300 ease-out
-          group-hover:scale-105 group-hover:shadow-[0_18px_40px_rgba(0,0,0,0.45)]
+          group-hover:scale-105 group-hover:shadow-[0_18px_40px_rgba(0,0,0,0.45)]/40
         `}
       >
         <div
@@ -397,7 +397,7 @@ export default function AboutPage() {
 
             {/* Image card */}
             <div className="w-full px-4 pt-10 ml-auto mr-auto md:w-4/12 group">
-              <div className="relative flex flex-col w-full min-w-0 mb-6 break-words bg-white rounded-lg shadow-lg transition-all duration-300 ease-out transform group-hover:-translate-y-2 group-hover:shadow-[0_22px_45px_rgba(0,0,0,0.25)]">
+              <div className="relative flex flex-col w-full min-w-0 mb-6 break-words bg-white rounded-lg shadow-lg transition-all duration-300 ease-out transform group-hover:-translate-y-1 group-hover:shadow-[0_22px_45px_rgba(0,0,0,0.25)]/10">
                 <img
                   alt="Team collaboration"
                   src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80"
@@ -428,7 +428,7 @@ export default function AboutPage() {
             <h3 className="mt-1 text-3xl font-semibold text-gray-800">
               Impact in Numbers
             </h3>
-            <p className="mt-3 text-sm text-gray-500">
+            <p className="mt-3 text-base text-gray-600">
               Numbers that reflect the trust our partners place in us and the
               work we deliver across every project.
             </p>
@@ -438,7 +438,7 @@ export default function AboutPage() {
             {stats.map((stat) => (
               <div
                 key={stat.label}
-                className="group relative flex flex-col items-center w-full min-w-0 break-words bg-white rounded-3xl shadow-lg pt-10 pb-6 px-5 transition-all duration-300 ease-out hover:-translate-y-2 hover:shadow-[0_22px_55px_rgba(15,23,42,0.35)]"
+                className="group relative flex flex-col items-center w-full min-w-0 break-words bg-white rounded-3xl shadow-lg pt-10 pb-6 px-5 transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_22px_55px_rgba(15,23,42,0.35)]/10"
               >
                 {/* 3D gold circle using same component as home */}
                 <ServiceIcon3D gradient="from-[#b98b2f] via-[#d1a94c] to-[#7a5a1d]">
@@ -465,7 +465,7 @@ export default function AboutPage() {
         <div className="px-6 mx-auto py-24 max-w-7xl lg:px-8">
           <div className="max-w-2xl mx-auto lg:mx-0 lg:max-w-none">
             <div className="grid max-w-xl grid-cols-1 gap-8 text-base leading-7 text-gray-600 lg:max-w-none lg:grid-cols-2">
-              <div className="transition-all duration-300 ease-out transform hover:-translate-y-1 hover:shadow-[0_16px_30px_rgba(0,0,0,0.12)] bg-white rounded-xl p-6">
+              <div className="transition-all duration-300 ease-out transform hover:-translate-y-1 hover:shadow-[0_16px_30px_rgba(0,0,0,0.12)]/10 bg-white rounded-xl p-6">
                 <h4 className="font-bold text-gray-700 text-xl mb-2">Vision</h4>
                 <p>
                   <span className="font-medium text-[var(--autisync-gold,#b98b2f)]">
@@ -481,7 +481,7 @@ export default function AboutPage() {
                   solutions.
                 </p>
               </div>
-              <div className="transition-all duration-300 ease-out transform hover:-translate-y-1 hover:shadow-[0_16px_30px_rgba(0,0,0,0.12)] bg-white rounded-xl p-6">
+              <div className="transition-all duration-300 ease-out transform hover:-translate-y-1 hover:shadow-[0_16px_30px_rgba(0,0,0,0.12)]/10 bg-white rounded-xl p-6">
                 <h4 className="font-bold text-gray-700 text-xl mb-2">
                   Mission
                 </h4>
@@ -520,7 +520,7 @@ export default function AboutPage() {
                 key={item.title}
                 className="w-full px-4 md:w-4/12 mb-8 group"
               >
-                <div className="text-center p-4 rounded-xl bg-white shadow-md transition-all duration-300 ease-out transform group-hover:-translate-y-2 group-hover:shadow-[0_20px_40px_rgba(0,0,0,0.18)]">
+                <div className="text-center p-4 rounded-xl bg-white shadow-md transition-all duration-300 ease-out transform group-hover:-translate-y-1 group-hover:shadow-[0_20px_40px_rgba(0,0,0,0.18)]/10">
                   <ServiceIcon3D
                     gradient={
                       item.top
@@ -552,7 +552,7 @@ export default function AboutPage() {
           aria-hidden="true"
         >
           <div
-            className="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ee0606] to-[#000000] opacity-20"
+            className="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#B28228] to-[#000000] opacity-20"
             style={{
               clipPath:
                 "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
@@ -564,7 +564,7 @@ export default function AboutPage() {
           aria-hidden="true"
         >
           <div
-            className="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ee0606] to-[#000000] opacity-20"
+            className="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#B28228] to-[#000000] opacity-20"
             style={{
               clipPath:
                 "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
@@ -572,7 +572,7 @@ export default function AboutPage() {
           />
         </div>
         <div className="px-6 mx-auto max-w-7xl lg:px-8">
-          <div className="mx-auto max-w-auto lg:mx-0 text-center transition-all duration-500 ease-out transform hover:-translate-y-1">
+          <div className="mx-auto max-w-auto lg:mx-0 text-center ">
             <h2 className="text-2xl font-bold text-center text-white sm:text-6xl">
               Only in Teamwork do
               <br /> <span className="text-[#B28228]">We lead Change</span>
@@ -663,15 +663,11 @@ export default function AboutPage() {
             goals
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/contact">
-              <button className="px-6 py-2 text-white bg-[var(--autisync-gold,#b98b2f)] rounded-md shadow-lg hover:bg-gray-900 transition-all hover:-translate-y-1 hover:shadow-[0_16px_30px_rgba(0,0,0,0.25)]">
+              <Link href="/contact" className="px-6 py-2 text-white bg-[var(--autisync-gold,#b98b2f)] rounded-md shadow-lg hover:bg-gray-900 transition-all hover:shadow-[0_16px_30px_rgba(0,0,0,0.25)]">
                 Get in Touch
-              </button>
             </Link>
-            <Link href="/servicepackage">
-              <button className="px-6 py-2 text-gray-700 bg-gray-100 rounded-md shadow-lg hover:bg-gray-200 transition-all hover:-translate-y-1 hover:shadow-[0_16px_30px_rgba(0,0,0,0.18)]">
+              <Link href="/servicepackage" className="px-6 py-2 text-gray-700 bg-gray-100 rounded-md shadow-lg hover:bg-gray-200 transition-all hover:shadow-[0_16px_30px_rgba(0,0,0,0.18)]">
                 View Our Services
-              </button>
             </Link>
           </div>
         </div>

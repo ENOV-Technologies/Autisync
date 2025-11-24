@@ -21,7 +21,7 @@ export default function Landing() {
         <div className="relative mx-auto">
           <div className="flex flex-wrap items-center">
             <div className="w-full px-4 ml-auto mr-auto text-center lg:w-9/12">
-              <div className="p-4 transition-all duration-500 ease-out transform hover:-translate-y-1">
+              <div className="p-4">
                 <h1 className="mt-24 text-5xl font-semibold text-white">
                   About Us
                 </h1>
