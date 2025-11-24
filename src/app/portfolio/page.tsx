@@ -278,44 +278,61 @@ export default function Portfolio() {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
 
   return (
-    <div className="min-h-screen bg-gray-100">
-      {/* HERO IMAGE ONLY (NO TEXT ON TOP) */}
-      <section className="relative w-full h-[55vh] min-h-[360px] overflow-hidden">
-        <div
-          className="absolute inset-0 bg-center bg-cover"
-          style={{
-            backgroundImage:
-              "url('https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')",
-          }}
-        />
-        <div className="absolute inset-0 bg-black/70" />
-
-        {/* Optional floating lights */}
-        <motion.div
-          className="pointer-events-none absolute -left-24 bottom-0 h-80 w-80 rounded-full bg-amber-500/20 blur-3xl"
-          animate={{ x: [0, 40, 0], y: [0, -25, 0], opacity: [0.3, 0.6, 0.3] }}
-          transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
-        />
-        <motion.div
-          className="pointer-events-none absolute -right-10 top-10 h-72 w-72 rounded-full bg-yellow-300/20 blur-3xl"
-          animate={{ x: [0, -30, 0], y: [0, 30, 0], opacity: [0.2, 0.5, 0.2] }}
-          transition={{ duration: 14, repeat: Infinity, ease: "easeInOut" }}
-        />
-      </section>
+    <div className="min-h-screen">
+      {/* HERO IMAGE ONLY (TEXT ON TOP) */}
+        <div className="relative flex items-center content-center justify-center pt-20 pb-32 h-dvh">
+            <div
+                className="absolute top-0 w-full h-full bg-center bg-cover "
+                style={{
+                    backgroundImage:
+                        "url('https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')",
+                }}
+            >
+          <span
+              id="blackOverlay"
+              className="absolute w-full h-full bg-black opacity-75"
+          ></span>
+            </div>
+            <div className=" relative mx-auto">
+                <div className="flex flex-wrap items-center">
+                    <div className="w-full px-4 ml-auto mr-auto text-center lg:w-9/12">
+                        <div className="p-4">
+                            <h1 className="mt-24 text-5xl font-semibold text-white ">
+                                Our Portfolio
+                            </h1>
+                            <p className="mt-4 text-lg text-gray-200 pb-10">
+                                A curated look at digital products we've designed and built for clients across industries — from corporate websites to data-driven platforms.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div
+                className="absolute bottom-0 left-0 right-0 top-auto w-full h-16 overflow-hidden pointer-events-none"
+                style={{ transform: "translateZ(0)" }}
+            >
+                <svg
+                    className="absolute bottom-0 overflow-hidden"
+                    xmlns="http://www.w3.org/2000/svg"
+                    preserveAspectRatio="none"
+                    version="1.1"
+                    viewBox="0 0 2560 100"
+                    x="0"
+                    y="0"
+                >
+                    <polygon
+                        className="text-white fill-current"
+                        points="2560 0 2560 100 0 100"
+                    ></polygon>
+                </svg>
+            </div>
+        </div>
 
       {/* TEXT BLOCK ON WHITE BACKGROUND */}
       <section className="bg-white pt-16 pb-10">
         <div className="container mx-auto text-center px-4 max-w-3xl">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Our Portfolio
-          </h1>
-          <p className="text-gray-600 text-lg leading-relaxed">
-            A curated look at digital products we&apos;ve designed and built for
-            clients across industries — from corporate websites to data-driven
-            platforms.
-          </p>
 
-          <p className="text-xs tracking-widest mt-6 text-amber-700 font-semibold uppercase">
+          <p className="text-xs tracking-widest mt-6 text-[var(--autisync-gold,#B98B2F)] font-semibold uppercase">
             Recent Work
           </p>
 
@@ -323,7 +340,7 @@ export default function Portfolio() {
             Websites We&apos;ve Crafted
           </h2>
 
-          <p className="mt-3 text-sm text-gray-500">
+          <p className="mt-3 text-lg text-gray-500">
             Every project combines strategy, design, and execution. Hover over a
             card to feel the Autisync touch.
           </p>
@@ -331,7 +348,7 @@ export default function Portfolio() {
       </section>
 
       {/* Portfolio Grid */}
-      <section className="pb-20 bg-gray-100">
+      <section className="pb-20 bg-white">
         <div className="container px-4 mx-auto relative pt-4">
           {/* Soft glow behind cards */}
           <div className="pointer-events-none absolute inset-0 -z-10">
@@ -406,7 +423,7 @@ export default function Portfolio() {
                 <div className="relative flex flex-1 flex-col px-6 py-6">
                   <div className="mb-3 flex items-center justify-between gap-2">
                     <span className="inline-flex items-center rounded-full bg-amber-50 px-3 py-1 text-[11px] font-semibold text-amber-800 border border-amber-200">
-                      <span className="mr-1 h-1.5 w-1.5 rounded-full bg-amber-500" />
+                      <span className="mr-1 h-1.5 w-1.5 rounded-full bg-[var(--autisync-gold,#B98B2F)]" />
                       {project.category}
                     </span>
                     <motion.span
@@ -434,7 +451,7 @@ export default function Portfolio() {
                     {project.title}
                   </motion.h3>
 
-                  <p className="mb-4 text-sm text-gray-600">
+                  <p className="mb-4 text-base text-gray-600">
                     {project.description}
                   </p>
 
@@ -443,7 +460,7 @@ export default function Portfolio() {
                       Previous work
                     </span>
                     <motion.div
-                      className="flex items-center text-xs font-medium text-amber-700"
+                      className="flex items-center text-xs font-medium text-[var(--autisync-gold,#B98B2F)]"
                       animate={hoveredCard === project.id ? { x: 4 } : { x: 0 }}
                     >
                       View case study
@@ -474,7 +491,7 @@ export default function Portfolio() {
               <h3 className="mb-3 text-3xl font-semibold leading-normal text-gray-800">
                 Our Achievements
               </h3>
-              <p className="mb-10 text-sm text-gray-500 max-w-xl mx-auto">
+              <p className="mb-10 text-base text-gray-500 max-w-2xl mx-auto">
                 Numbers that reflect the trust our partners place in us and the
                 work we deliver across every project.
               </p>
@@ -519,7 +536,7 @@ export default function Portfolio() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="mb-6 text-4xl font-semibold text-gray-800"
+                className="mb-2 text-3xl font-semibold text-gray-800"
               >
                 Ready to Start Your Project?
               </motion.h2>
@@ -528,7 +545,7 @@ export default function Portfolio() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="mb-8 text-lg text-gray-600"
+                className="mb-8 text-base text-gray-600"
               >
                 Let&apos;s collaborate and turn your next idea into a flagship
                 website for your brand.

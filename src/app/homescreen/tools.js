@@ -94,7 +94,7 @@ export default function Example() {
       <>
     <div className="py-24 bg-gray-100 sm:py-32">
       <div className="px-6 mx-auto max-w-7xl lg:px-8">
-        <h2 className="text-3xl font-semibold leading-8 text-center text-gray-700 ">
+        <h2 className="text-3xl font-semibold leading-8 text-center text-gray-800 ">
           Technologies Used
         </h2>
         <div className="grid items-center max-w-lg grid-cols-4 mx-auto mt-10 gap-x-4 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-2 lg:mx-0 lg:max-w-none lg:grid-cols-10">

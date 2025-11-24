@@ -150,14 +150,14 @@ export default function WhyUs() {
                 ))}
               </div>
 
-              {/* Button */}
-              <button className="inline-flex justify-center px-4 py-2 mt-6 text-sm font-medium text-gray-50 bg-[var(--autisync-gold,#b98b2f)] border border-transparent rounded-md shadow-lg hover:bg-gray-900 hover:-translate-y-0.5 hover:shadow-xl transition-transform duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">
-                <Link href="/servicepackage">Service Packages</Link>
-              </button>
+                {/* button */}
+                <button className="inline-flex justify-center px-4 py-2 mt-6 text-sm font-medium text-gray-50 bg-[var(--autisync-gold,#b98b2f)] border border-transparent rounded-md shadow-lg hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">
+                  <Link href="/servicepackage">Service Packages</Link>
+                </button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
   );
 }
