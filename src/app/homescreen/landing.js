@@ -1,15 +1,30 @@
 import React from "react";
 import Link from "next/link";
 
-/* ========= 3D Icon Wrapper ========= */
+/* ========= 3D Icon Wrapper (with hover) ========= */
 
 function ServiceIcon3D({ children, gradient }) {
   return (
     <div className="inline-flex items-center justify-center mb-5">
       <div
-        className={`flex items-center justify-center w-14 h-14 rounded-full bg-gradient-to-br ${gradient} shadow-[0_14px_30px_rgba(0,0,0,0.35)] border border-white/10`}
+        className={`
+          flex items-center justify-center w-14 h-14 rounded-full
+          bg-gradient-to-br ${gradient}
+          shadow-[0_14px_30px_rgba(0,0,0,0.35)]
+          border border-white/10
+          transition-transform duration-300 ease-out
+          group-hover:scale-105 group-hover:shadow-[0_18px_40px_rgba(0,0,0,0.45)]
+        `}
       >
-        <div className="flex items-center justify-center w-9 h-9 rounded-full bg-white/95 shadow-[inset_0_2px_4px_rgba(0,0,0,0.25)] text-gray-800">
+        <div
+          className={`
+            flex items-center justify-center w-9 h-9 rounded-full
+            bg-white/95
+            shadow-[inset_0_2px_4px_rgba(0,0,0,0.25)]
+            transition-transform duration-300 ease-out
+            group-hover:scale-110
+          `}
+        >
           {children}
         </div>
       </div>
@@ -162,7 +177,7 @@ export default function Landing() {
           <div className="flex flex-wrap items-center">
             <div className="w-full px-4 ml-auto mr-auto text-center lg:w-8/12">
               <div className="p-2">
-                <h1 className="text-5xl font-semibold text-white pb-4">
+                <h1 className="pb-4 text-5xl font-semibold text-white">
                   We Systemize Your Success.
                 </h1>
                 <h3 className="font-thin text-gray-200">
@@ -188,12 +203,12 @@ export default function Landing() {
         <div className="container px-4 mx-auto">
           {/* Services */}
           <div className="flex flex-wrap">
-            {/* Marketing */}
+            {/* Marketing (TOP – black circle, gold icon) */}
             <div className="w-full px-4 pt-6 text-center lg:pt-12 md:w-4/12">
-              <div className="relative flex flex-col w-full min-w-0 mb-8 break-words bg-white rounded-lg shadow-lg">
+              <div className="group relative flex flex-col w-full min-w-0 mb-8 break-words bg-white rounded-lg shadow-lg transition-transform duration-300 ease-out hover:-translate-y-1 hover:shadow-xl">
                 <div className="flex-auto px-4 py-5">
-                  <ServiceIcon3D gradient="from-[#fb7185] via-[#ef4444] to-[#b91c1c]">
-                    <MarketingSeoIcon />
+                  <ServiceIcon3D gradient="from-[#1C1C1C] via-[#2a2a2a] to-[#000000]">
+                    <MarketingSeoIcon className="w-5 h-5 text-[var(--autisync-gold,#b98b2f)]" />
                   </ServiceIcon3D>
                   <h6 className="text-xl font-semibold text-gray-700">
                     Marketing &amp; SEO
@@ -207,12 +222,12 @@ export default function Landing() {
               </div>
             </div>
 
-            {/* Web Development */}
+            {/* Web Development (TOP – black circle, gold icon) */}
             <div className="w-full px-4 text-center md:w-4/12">
-              <div className="relative flex flex-col w-full min-w-0 mb-8 break-words bg-white rounded-lg shadow-lg">
+              <div className="group relative flex flex-col w-full min-w-0 mb-8 break-words bg-white rounded-lg shadow-lg transition-transform duration-300 ease-out hover:-translate-y-1 hover:shadow-xl">
                 <div className="flex-auto px-4 py-5">
-                  <ServiceIcon3D gradient="from-gray-200 via-gray-300 to-gray-400">
-                    <WebDevIcon />
+                  <ServiceIcon3D gradient="from-[#1C1C1C] via-[#2a2a2a] to-[#000000]">
+                    <WebDevIcon className="w-5 h-5 text-[var(--autisync-gold,#b98b2f)]" />
                   </ServiceIcon3D>
                   <h6 className="text-xl font-semibold text-gray-700">
                     Web Development
@@ -227,12 +242,12 @@ export default function Landing() {
               </div>
             </div>
 
-            {/* IT Consultation/Technical Support */}
+            {/* IT Consultation/Technical Support (TOP – black circle, gold icon) */}
             <div className="w-full px-4 pt-6 text-center lg:pt-12 md:w-4/12">
-              <div className="relative flex flex-col w-full min-w-0 mb-8 break-words bg-white rounded-lg shadow-lg">
+              <div className="group relative flex flex-col w-full min-w-0 mb-8 break-words bg-white rounded-lg shadow-lg transition-transform duration-300 ease-out hover:-translate-y-1 hover:shadow-xl">
                 <div className="flex-auto px-4 py-5">
-                  <ServiceIcon3D gradient="from-[#fb7185] via-[#f97316] to-[#b45309]">
-                    <ITSupportIcon />
+                  <ServiceIcon3D gradient="from-[#1C1C1C] via-[#2a2a2a] to-[#000000]">
+                    <ITSupportIcon className="w-5 h-5 text-[var(--autisync-gold,#b98b2f)]" />
                   </ServiceIcon3D>
                   <h6 className="text-xl font-semibold text-gray-700">
                     IT Consultation / Technical Support
@@ -247,12 +262,12 @@ export default function Landing() {
               </div>
             </div>
 
-            {/* UI/UX Design */}
+            {/* UI/UX Design (BOTTOM – gold circle, dark icon) */}
             <div className="w-full px-4 pt-6 text-center md:w-4/12">
-              <div className="relative flex flex-col w-full min-w-0 mb-8 break-words bg-white rounded-lg shadow-lg">
+              <div className="group relative flex flex-col w-full min-w-0 mb-8 break-words bg-white rounded-lg shadow-lg transition-transform duration-300 ease-out hover:-translate-y-1 hover:shadow-xl">
                 <div className="flex-auto px-4 py-5">
-                  <ServiceIcon3D gradient="from-[#fde68a] via-[#facc15] to-[#b45309]">
-                    <UiUxIcon />
+                  <ServiceIcon3D gradient="from-[#b98b2f] via-[#d1a94c] to-[#7a5a1d]">
+                    <UiUxIcon className="w-5 h-5 text-gray-900" />
                   </ServiceIcon3D>
                   <h6 className="text-xl font-semibold text-gray-700">
                     UI/UX Design
@@ -266,12 +281,12 @@ export default function Landing() {
               </div>
             </div>
 
-            {/* Graphic Design */}
+            {/* Graphic Design (BOTTOM – gold circle, dark icon) */}
             <div className="w-full px-4 text-center md:w-4/12">
-              <div className="relative flex flex-col w-full min-w-0 mb-8 break-words bg-white rounded-lg shadow-lg">
+              <div className="group relative flex flex-col w-full min-w-0 mb-8 break-words bg-white rounded-lg shadow-lg transition-transform duration-300 ease-out hover:-translate-y-1 hover:shadow-xl">
                 <div className="flex-auto px-4 py-5">
-                  <ServiceIcon3D gradient="from-gray-200 via-gray-300 to-gray-400">
-                    <GraphicIcon />
+                  <ServiceIcon3D gradient="from-[#b98b2f] via-[#d1a94c] to-[#7a5a1d]">
+                    <GraphicIcon className="w-5 h-5 text-gray-900" />
                   </ServiceIcon3D>
                   <h6 className="text-xl font-semibold text-gray-700">
                     Graphic Design
@@ -284,12 +299,12 @@ export default function Landing() {
               </div>
             </div>
 
-            {/* Software / App Development */}
+            {/* Software / App Development (BOTTOM – gold circle, dark icon) */}
             <div className="w-full px-4 pt-6 text-center md:w-4/12">
-              <div className="relative flex flex-col w-full min-w-0 mb-8 break-words bg-white rounded-lg shadow-lg">
+              <div className="group relative flex flex-col w-full min-w-0 mb-8 break-words bg-white rounded-lg shadow-lg transition-transform duration-300 ease-out hover:-translate-y-1 hover:shadow-xl">
                 <div className="flex-auto px-4 py-5">
-                  <ServiceIcon3D gradient="from-[#fde68a] via-[#facc15] to-[#92400e]">
-                    <AppDevIcon />
+                  <ServiceIcon3D gradient="from-[#b98b2f] via-[#d1a94c] to-[#7a5a1d]">
+                    <AppDevIcon className="w-5 h-5 text-gray-900" />
                   </ServiceIcon3D>
                 </div>
                 <div className="flex-auto px-4 pb-5">
@@ -308,11 +323,11 @@ export default function Landing() {
           {/* Who are we */}
           <div className="flex flex-wrap items-center mt-32">
             {/* who we are section */}
-            <div className="w-full px-4 ml-auto mr-auto md:w-5/12">
+            <div className="w-full px-4 ml-auto mr-auto md:w-5/12 group">
               <ServiceIcon3D gradient="from-gray-200 via-gray-300 to-gray-400">
-                <WhoWeAreIcon />
+                <WhoWeAreIcon className="w-6 h-6 text-[var(--autisync-gold,#b98b2f)]" />
               </ServiceIcon3D>
-              <h3 className="mb-2 text-3xl font-semibold leading-normal text-gray-700">
+              <h3 className="mb-2 text-3xl font-semibold leading-normal text-gray-700 transition-colors duration-200 group-hover:text-gray-900">
                 Who Are We?
               </h3>
               <p className="mt-4 mb-4 leading-relaxed text-gray-600">
@@ -337,8 +352,13 @@ export default function Landing() {
             </div>
 
             {/* Seamless services section */}
-            <div className="w-full px-4 pt-10 ml-auto mr-auto md:w-4/12">
-              <div className="relative flex flex-col w-full min-w-0 mb-6 break-words bg-white rounded-lg shadow-lg">
+            <div className="w-full px-4 pt-10 ml-auto mr-auto md:w-4/12 group">
+              <div className="
+                  relative flex flex-col w-full min-w-0 mb-6 break-words bg-white rounded-lg shadow-lg 
+                  transition-all duration-300 ease-out 
+                  group-hover:-translate-y-2 group-hover:shadow-[0_20px_45px_rgba(0,0,0,0.25)]
+                "
+              >
                 <img
                   alt="Seamless services"
                   src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80"
@@ -358,13 +378,13 @@ export default function Landing() {
                   </h4>
                   <p className="mt-2 font-light text-gray-600 text-md">
                     Giving the necessary technical support to continue your work
-                    daily and long term activities uninterrupted and
-                    efficiently.
+                    daily and long term activities uninterrupted and efficiently.
                   </p>
                 </blockquote>
               </div>
             </div>
             {/* Seamless services section end */}
+
           </div>
         </div>
       </section>
