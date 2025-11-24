@@ -378,7 +378,7 @@ export default function AboutPage() {
                 <BookIcon className="w-6 h-6 text-[var(--autisync-gold,#B98B2F)]" />
               </ServiceIcon3D>
 
-              <h3 className="mb-2 text-3xl leading-normal text-gray-700">
+              <h3 className="mb-2 text-3xl font-semibold leading-normal text-gray-800 transition-colors duration-200 group-hover:text-gray-900">
                 Our Story
               </h3>
               <p className="mt-4 mb-4 leading-relaxed text-gray-600">
@@ -580,7 +580,7 @@ export default function AboutPage() {
             <div className="flex items-center justify-center mt-10 gap-x-6">
               <Link
                 className="inline-flex justify-center px-4 py-2 text-sm font-medium text-gray-800 border border-transparent rounded-md shadow-md bg-gray-50 hover:text-white hover:bg-[#B28228] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 transition-all"
-                href={"/profile/perfil_por.pdf"}
+                href={"/contact"}
               >
                 Set-up a Consultation
               </Link>

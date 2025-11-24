@@ -75,7 +75,7 @@ const BrandingGrid = () => {
             ))}
           </ul>
           <a
-            href="https://wa.me/+244927114400?text=I would like to learn more about your branding services."
+            href="https://wa.me/+447883317646?text=I would like to learn more about your branding services."
             className="mt-6 inline-block w-full text-center py-2 px-4 rounded-md font-semibold border border-[#B28228] text-[#B28228] hover:bg-[#B28228] hover:text-white transition"
             target="_blank"
           >
@@ -112,7 +112,7 @@ const SocialMediaPackages = () => (
           <li>📊 Basic performance report</li>
         </ul>
         <a
-          href="https://wa.me/+244927114400?text=I’m interested in the Basic Social Media Management package"
+          href="https://wa.me/+447883317646?text=I’m interested in the Basic Social Media Management package"
           className="inline-block w-full mt-6 text-center text-sm font-semibold text-[#B28228] border border-[#B28228] py-2 rounded hover:bg-[#B28228] hover:text-white transition"
           target="_blank"
         >
@@ -133,7 +133,7 @@ const SocialMediaPackages = () => (
           <li>📊 Monthly performance & ad reports</li>
         </ul>
         <a
-          href="https://wa.me/+244927114400?text=I’m interested in the Intermediate Social Media Management package"
+          href="https://wa.me/+447883317646?text=I’m interested in the Intermediate Social Media Management package"
           className="inline-block w-full mt-6 text-center text-sm font-semibold text-[#B28228] border border-[#B28228] py-2 rounded hover:bg-[#B28228] hover:text-white transition"
           target="_blank"
         >
@@ -154,7 +154,7 @@ const SocialMediaPackages = () => (
           <li>📊 Advanced analytics and reporting</li>
         </ul>
         <a
-          href="https://wa.me/+244927114400?text=I’m interested in the Premium Social Media Management package"
+          href="https://wa.me/+447883317646?text=I’m interested in the Premium Social Media Management package"
           className="inline-block w-full mt-6 text-center text-sm font-semibold text-[#B28228] border border-[#B28228] py-2 rounded hover:bg-[#B28228] hover:text-white transition"
           target="_blank"
         >
@@ -276,7 +276,7 @@ export default function ServicePackagesPage() {
         <div className="mt-12 text-center">
           <Link
             className="inline-flex items-center justify-center px-4 py-2 text-sm font-medium border rounded-md shadow-sm bg-[#3B3B3B] text-white hover:bg-[#B28228] focus:ring-2 focus:ring-offset-2 focus:ring-[#B28228]"
-            href="tel:+244927114400"
+            href="https://wa.me/+447883317646"
           >
             <PhoneIcon className="w-5 h-5 mr-2 text-white" />
             Call Us for IT Consultation

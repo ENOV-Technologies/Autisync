@@ -71,7 +71,7 @@ export default function CallToAction() {
                   <p className="mt-1 mb-4 text-gray-600">
                     Complete this form and we’ll be in touch within 24 hours. Or{" "}
                     <a
-                      href="https://wa.me/244927114400"
+                      href="https://wa.me/+447883317646"
                       className="text-[var(--autisync-gold,#b98b2f)] font-semibold hover:text-yellow-700"
                     >
                       message us on WhatsApp

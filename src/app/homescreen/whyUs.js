@@ -109,6 +109,12 @@ export default function WhyUs() {
               />
             </div>
           </div>
+          {/* ============ Whatasapp autisync ====================== */}
+          <script 
+            src="https://beta.leadconnectorhq.com/loader.js"  
+            data-resources-url="https://beta.leadconnectorhq.com/chat-widget/loader.js" 
+          data-widget-id="69247f4a20fcaad59b0ea302"   > 
+          </script>
 
           {/* ====================== TEXT CONTENT ====================== */}
           <div className="w-full px-4 ml-auto mr-auto md:w-5/12">
