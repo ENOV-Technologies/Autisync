@@ -96,12 +96,10 @@ export default function Contact() {
                   {/* Service Button */}
                   <div className="w-full px-4 lg:w-4/12 lg:order-3 lg:text-right lg:self-center">
                     <div className="px-3 py-0 mt-32 sm:mt-0">
-                      <button
-                        className="px-4 py-2 mb-1 text-xs font-bold text-white uppercase transition-all duration-150 ease-linear bg-[#1C1C1C] rounded shadow outline-none hover:bg-[var(--autisync-gold,#B98B2F)] hover:shadow-md focus:outline-none sm:mr-2"
+                      <Link href="/servicepackage/"
+                        className="px-4 py-2 mb-1 text-xs text-white uppercase duration-150 ease-linear bg-[#1C1C1C] rounded shadow outline-none hover:bg-[var(--autisync-gold,#B98B2F)] hover:shadow-md focus:outline-none sm:mr-2 transition-all hover:shadow-[0_16px_30px_rgba(0,0,0,0.18)]/10"
                         type="button"
-                      >
-                        <Link href="/servicepackage/">Service Package</Link>
-                      </button>
+                      >Service Package</Link>
                     </div>
                   </div>
 
@@ -110,13 +108,13 @@ export default function Contact() {
                     <div className="flex justify-center py-0 pt-8 lg:pt-4">
                       <div className="p-3 mr-4 text-center">
                         <span className="block text-xl font-bold tracking-wide text-gray-600 uppercase">
-                          179
+                          239
                         </span>
                         <span className="text-sm text-gray-400">Queries</span>
                       </div>
                       <div className="p-3 mr-4 text-center">
                         <span className="block text-xl font-bold tracking-wide text-gray-600 uppercase">
-                          4
+                          2
                         </span>
                         <span className="text-sm text-gray-400">
                           Support Line
