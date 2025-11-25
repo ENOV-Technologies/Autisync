@@ -229,7 +229,7 @@ export default function Footer() {
         </div>
 
         <hr className="my-6 border-gray-600" />
-
+        
         {/* Bottom row: social + copyright */}
         <div className="flex flex-wrap items-center justify-center md:justify-between">
           <div className="w-full px-4 mx-auto text-center md:w-4/12">

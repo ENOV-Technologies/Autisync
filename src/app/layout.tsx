@@ -6,6 +6,8 @@ import "./globals.css";
 import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";
 import { Analytics } from "@vercel/analytics/next"
+import Script from "next/script";
+
 // import Navbar from '/components/Navbar'
 
 const geistSans = Geist({
@@ -38,6 +40,12 @@ export default function RootLayout({
       <Analytics/>
       <Navbar />
         {children}
+        <Script
+          src="https://beta.leadconnectorhq.com/loader.js"
+          data-resources-url="https://beta.leadconnectorhq.com/chat-widget/loader.js"
+          data-widget-id="69247f4a20fcaad59b0ea302"
+          strategy="afterInteractive"
+        />
       <Footer />
       </body>
 

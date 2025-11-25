@@ -15,47 +15,59 @@ type ProjectCategory =
   | "Education Website"
   | "Fintech Website";
 
-const portfolioProjects = [
+interface PortfolioProject {
+  id: number;
+  title: string;
+  category: ProjectCategory;
+  image: string;
+  description: string;
+  url?: string;
+}
+
+const portfolioProjects: PortfolioProject[] = [
   {
     id: 1,
     title: "Ninth Vision",
-    category: "Corporate Website" as ProjectCategory,
+    category: "Corporate Website",
     image: "/logos/NinthVision.png",
     description: "Enterprise website with modern UI/UX for a visionary brand.",
+    url: "https://www.9thvision.com/"
   },
   {
     id: 2,
     title: "OCCUCARE",
-    category: "Healthcare Website" as ProjectCategory,
+    category: "Healthcare Website",
     image: "/logos/OCCUCARE.png",
     description: "Healthcare management platform presented as a clean web app.",
   },
   {
     id: 3,
     title: "Segucyber",
-    category: "Cybersecurity Website" as ProjectCategory,
+    category: "Cybersecurity Website",
     image: "/logos/Segucyber.png",
     description: "Security solutions website focused on trust and reliability.",
+    url: "https://segu-cyber.vercel.app/",
   },
   {
     id: 4,
     title: "Tchary Glamour",
-    category: "E-commerce Website" as ProjectCategory,
+    category: "E-commerce Website",
     image: "/logos/TcharyGlamour.png",
     description:
       "Beauty and fashion e-commerce experience with modern shopping flow.",
   },
   {
     id: 5,
-    title: "YourP",
-    category: "Web App" as ProjectCategory,
+    title: "Your Pharmacy",
+    category: "Web App",
     image: "/logos/YourP.png",
     description: "Personal productivity platform with a web-first experience.",
+    url: "https://your-pharm.vercel.app/",
   },
   {
     id: 6,
     title: "AJF Solutions",
-    category: "Corporate Website" as ProjectCategory,
+    category: "Corporate Website",
     image: "/logos/ajf.png",
     description:
       "Enterprise business management suite presented as a clear corporate site.",
@@ -63,24 +75,24 @@ const portfolioProjects = [
   {
     id: 7,
     title: "DSSI",
-    category: "Data & Analytics" as ProjectCategory,
+    category: "Data & Analytics",
     image: "/logos/dssi.png",
     description: "Data science and integration platform with a minimal design.",
   },
   {
     id: 8,
     title: "OKU Platform",
-    category: "Education Website" as ProjectCategory,
+    category: "Education Website",
     image: "/logos/oku.png",
     description: "Educational technology website for a modern learning platform.",
   },
   {
     id: 9,
-    title: "Passa Solutions",
-    category: "Fintech Website" as ProjectCategory,
+    title: "Passa Studio",
+    category: "Fintech Website & IT Support",
     image: "/logos/passa.png",
     description:
-      "Financial technology solutions website with a focus on clarity and trust.",
+    "We supported Passa Studio with end-to-end IT services including business device setup, technical support, helpdesk operations, and secure systems configuration to ensure smooth daily operations.",
   },
 ];
 
@@ -188,7 +200,7 @@ function progressSuffix(target: number, suffix: string, display: number) {
   return display >= target ? suffix : "";
 }
 
-// Auto-count + 3D icon badge
+// Auto-count + 3D icon badge (with hover effects)
 function AchievementStat({
   icon,
   label,
@@ -232,7 +244,12 @@ function AchievementStat({
       whileInView={{ opacity: 1, scale: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.55, delay }}
-      className="relative flex flex-col items-center w-full min-w-0 break-words bg-white rounded-3xl shadow-lg pt-10 pb-6 px-5"
+      className="
+        group relative flex flex-col items-center w-full min-w-0 break-words
+        bg-white rounded-3xl shadow-lg pt-10 pb-6 px-5
+        transition-all duration-300 ease-out
+        hover:-translate-y-2 hover:shadow-[0_22px_55px_rgba(15,23,42,0.35)]
+      "
     >
       {/* 3D ICON BADGE */}
       <div className="absolute -top-8 left-1/2 -translate-x-1/2">
@@ -243,6 +260,8 @@ function AchievementStat({
             bg-gradient-to-br from-[#fbd36a] via-[#f2a51f] to-[#b87416]
             shadow-[0_12px_24px_rgba(0,0,0,0.25)]
             border border-[#f6e2a1]
+            transition-transform duration-300 ease-out
+            group-hover:scale-110 group-hover:shadow-[0_18px_40px_rgba(0,0,0,0.35)]
           "
         >
           <div
@@ -252,6 +271,8 @@ function AchievementStat({
               bg-white/95
               shadow-[inset_0_3px_6px_rgba(0,0,0,0.18)]
               text-[var(--autisync-gold,#b98b2f)]
+              transition-transform duration-300 ease-out
+              group-hover:scale-105
             "
           >
             {icon}
@@ -267,7 +288,14 @@ function AchievementStat({
       <div className="mt-2 text-sm text-slate-500">{label}</div>
 
       {/* Bottom accent bar */}
-      <div className="mt-6 h-1 w-full rounded-full bg-[var(--autisync-gold,#f2a51f)]" />
+      <div
+        className="
+          mt-6 h-1 w-full origin-center scale-x-75
+          rounded-full bg-[var(--autisync-gold,#f2a51f)]
+          transition-transform duration-300 ease-out
+          group-hover:scale-x-100
+        "
+      />
     </motion.div>
   );
 }
@@ -276,62 +304,64 @@ function AchievementStat({
 
 export default function Portfolio() {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
+  const [previewUrl, setPreviewUrl] = useState<string | null>(null);
 
   return (
     <div className="min-h-screen">
       {/* HERO IMAGE ONLY (TEXT ON TOP) */}
-        <div className="relative flex items-center content-center justify-center pt-20 pb-32 h-dvh">
-            <div
-                className="absolute top-0 w-full h-full bg-center bg-cover "
-                style={{
-                    backgroundImage:
-                        "url('https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')",
-                }}
-            >
+      <div className="relative flex items-center content-center justify-center pt-20 pb-32 h-dvh">
+        <div
+          className="absolute top-0 w-full h-full bg-center bg-cover "
+          style={{
+            backgroundImage:
+              "url('https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')",
+          }}
+        >
           <span
-              id="blackOverlay"
-              className="absolute w-full h-full bg-black opacity-75"
+            id="blackOverlay"
+            className="absolute w-full h-full bg-black opacity-75"
           ></span>
-            </div>
-            <div className=" relative mx-auto">
-                <div className="flex flex-wrap items-center">
-                    <div className="w-full px-4 ml-auto mr-auto text-center lg:w-9/12">
-                        <div className="p-4">
-                            <h1 className="mt-24 text-5xl font-semibold text-white ">
-                                Our Portfolio
-                            </h1>
-                            <p className="mt-4 text-lg text-gray-200 pb-10">
-                                A curated look at digital products we've designed and built for clients across industries — from corporate websites to data-driven platforms.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div
-                className="absolute bottom-0 left-0 right-0 top-auto w-full h-16 overflow-hidden pointer-events-none"
-                style={{ transform: "translateZ(0)" }}
-            >
-                <svg
-                    className="absolute bottom-0 overflow-hidden"
-                    xmlns="http://www.w3.org/2000/svg"
-                    preserveAspectRatio="none"
-                    version="1.1"
-                    viewBox="0 0 2560 100"
-                    x="0"
-                    y="0"
-                >
-                    <polygon
-                        className="text-white fill-current"
-                        points="2560 0 2560 100 0 100"
-                    ></polygon>
-                </svg>
-            </div>
         </div>
+        <div className=" relative mx-auto">
+          <div className="flex flex-wrap items-center">
+            <div className="w-full px-4 ml-auto mr-auto text-center lg:w-9/12">
+              <div className="p-4">
+                <h1 className="mt-24 text-5xl font-semibold text-white ">
+                  Our Portfolio
+                </h1>
+                <p className="mt-4 text-lg text-gray-200 pb-10">
+                  A curated look at digital products we've designed and built
+                  for clients across industries — from corporate websites to
+                  data-driven platforms.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="absolute bottom-0 left-0 right-0 top-auto w-full h-16 overflow-hidden pointer-events-none"
+          style={{ transform: "translateZ(0)" }}
+        >
+          <svg
+            className="absolute bottom-0 overflow-hidden"
+            xmlns="http://www.w3.org/2000/svg"
+            preserveAspectRatio="none"
+            version="1.1"
+            viewBox="0 0 2560 100"
+            x="0"
+            y="0"
+          >
+            <polygon
+              className="text-white fill-current"
+              points="2560 0 2560 100 0 100"
+            ></polygon>
+          </svg>
+        </div>
+      </div>
 
       {/* TEXT BLOCK ON WHITE BACKGROUND */}
       <section className="bg-white pt-16 pb-10">
         <div className="container mx-auto text-center px-4 max-w-3xl">
-
           <p className="text-xs tracking-widest mt-6 text-[var(--autisync-gold,#B98B2F)] font-semibold uppercase">
             Recent Work
           </p>
@@ -342,7 +372,8 @@ export default function Portfolio() {
 
           <p className="mt-3 text-lg text-gray-500">
             Every project combines strategy, design, and execution. Hover over a
-            card to feel the Autisync touch.
+            card to feel the Autisync touch — and open a live preview to explore
+            the full experience.
           </p>
         </div>
       </section>
@@ -459,13 +490,25 @@ export default function Portfolio() {
                     <span className="text-[11px] uppercase tracking-[0.2em] text-gray-400">
                       Previous work
                     </span>
-                    <motion.div
-                      className="flex items-center text-xs font-medium text-[var(--autisync-gold,#B98B2F)]"
-                      animate={hoveredCard === project.id ? { x: 4 } : { x: 0 }}
-                    >
-                      View case study
-                      <span className="ml-1">↗</span>
-                    </motion.div>
+
+                    <div className="flex items-center gap-3">
+                      {project.url && (
+                        <button
+                          type="button"
+                          onClick={() => setPreviewUrl(project.url!)}
+                          className="text-xs font-medium text-[var(--autisync-gold,#B98B2F)] underline-offset-4 hover:underline"
+                        >
+                          Live preview
+                        </button>
+                      )}
+                      <motion.div
+                        className="flex items-center text-xs font-medium text-[var(--autisync-gold,#B98B2F)]"
+                        animate={hoveredCard === project.id ? { x: 4 } : { x: 0 }}
+                      >
+                        View case study
+                        <span className="ml-1">↗</span>
+                      </motion.div>
+                    </div>
                   </div>
                 </div>
               </motion.article>
@@ -550,23 +593,50 @@ export default function Portfolio() {
                 Let&apos;s collaborate and turn your next idea into a flagship
                 website for your brand.
               </motion.p>
-              {/*<motion.button*/}
-              {/*  initial={{ opacity: 0, y: 20 }}*/}
-              {/*  whileInView={{ opacity: 1, y: 0 }}*/}
-              {/*  viewport={{ once: true }}*/}
-              {/*  transition={{ delay: 0.2 }}*/}
-              {/*  whileHover={{ scale: 1.05 }}*/}
-              {/*  whileTap={{ scale: 0.95 }}*/}
-              {/*>*/}
-                <Link href="https://wa.me/+447883317646" target="_blank"                 className="inline-flex items-center justify-center rounded-md border border-transparent bg-[var(--autisync-gold,#b98b2f)] px-8 py-2 text-sm font-medium text-white shadow-lg hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-all hover:shadow-[0_16px_30px_rgba(0,0,0,0.18)]/10"
-                >
-                  Get In Touch
-                </Link>
-              {/*</motion.button>*/}
+
+              <Link
+                href="https://wa.me/+447883317646"
+                target="_blank"
+                className="inline-flex items-center justify-center rounded-md border border-transparent bg-[var(--autisync-gold,#b98b2f)] px-8 py-2 text-sm font-medium text-white shadow-lg hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-all hover:shadow-[0_16px_30px_rgba(0,0,0,0.18)]/10"
+              >
+                Get In Touch
+              </Link>
             </div>
           </div>
         </div>
       </section>
+
+      {/* === LIVE PREVIEW MODAL === */}
+      {previewUrl && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          className="fixed inset-0 z-[80] flex items-center justify-center bg-black/70"
+          onClick={() => setPreviewUrl(null)} // ← CLOSE WHEN CLICKING BACKDROP
+        >
+          <div
+            className="relative w-[95vw] max-w-5xl h-[80vh] bg-white rounded-2xl shadow-2xl overflow-hidden"
+            onClick={(e) => e.stopPropagation()} // ← PREVENT CLOSING WHEN CLICKING MODAL CONTENT
+          >
+            {/* CLOSE BUTTON */}
+            <button
+              onClick={() => setPreviewUrl(null)}
+              className="absolute right-4 top-3 z-10 rounded-full bg-black/70 px-3 py-1 text-xs font-medium text-white hover:bg-black"
+            >
+              Close ✕
+            </button>
+
+            {/* WEBSITE IFRAME */}
+            <iframe
+              src={previewUrl}
+              title="Project preview"
+              className="w-full h-full border-0"
+              loading="lazy"
+            />
+          </div>
+        </motion.div>
+      )}
     </div>
   );
 }
