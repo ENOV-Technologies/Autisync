@@ -13,7 +13,7 @@ type ProjectCategory =
   | "Web App"
   | "Data & Analytics"
   | "Education Website"
-  | "Fintech Website";
+  | "IT Support";
 
 interface PortfolioProject {
   id: number;
@@ -89,10 +89,9 @@ const portfolioProjects: PortfolioProject[] = [
   {
     id: 9,
     title: "Passa Studio",
-    category: "Fintech Website & IT Support",
+    category: "IT Support",
     image: "/logos/passa.png",
-    description:
-    "We supported Passa Studio with end-to-end IT services including business device setup, technical support, helpdesk operations, and secure systems configuration to ensure smooth daily operations.",
+    description: "We supported Passa Studio with end-to-end IT services, including business device setup, technical support, helpdesk operations, and secure systems configuration to ensure smooth daily operations.",
   },
 ];
 
