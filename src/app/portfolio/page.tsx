@@ -247,7 +247,7 @@ function AchievementStat({
         group relative flex flex-col items-center w-full min-w-0 break-words
         bg-white rounded-3xl shadow-lg pt-10 pb-6 px-5
         transition-all duration-300 ease-out
-        hover:-translate-y-2 hover:shadow-[0_22px_55px_rgba(15,23,42,0.35)]
+        hover:-translate-y-2 hover:shadow-[0_22px_55px_rgba(15,23,42,0.35)]/10
       "
     >
       {/* 3D ICON BADGE */}
@@ -256,11 +256,10 @@ function AchievementStat({
           className="
             flex items-center justify-center
             w-16 h-16 rounded-full
-            bg-gradient-to-br from-[#fbd36a] via-[#f2a51f] to-[#b87416]
+            bg-gradient-to-br from-[#b98b2f] via-[#d1a94c] to-[#7a5a1d]
             shadow-[0_12px_24px_rgba(0,0,0,0.25)]
-            border border-[#f6e2a1]
             transition-transform duration-300 ease-out
-            group-hover:scale-110 group-hover:shadow-[0_18px_40px_rgba(0,0,0,0.35)]
+             group-hover:shadow-[0_18px_40px_rgba(0,0,0,0.35)]/10
           "
         >
           <div
@@ -287,14 +286,14 @@ function AchievementStat({
       <div className="mt-2 text-sm text-slate-500">{label}</div>
 
       {/* Bottom accent bar */}
-      <div
-        className="
-          mt-6 h-1 w-full origin-center scale-x-75
-          rounded-full bg-[var(--autisync-gold,#f2a51f)]
-          transition-transform duration-300 ease-out
-          group-hover:scale-x-100
-        "
-      />
+      {/*<div*/}
+      {/*  className="*/}
+      {/*    mt-6 h-1 w-full origin-center scale-x-75*/}
+      {/*    rounded-full bg-[var(--autisync-gold,#f2a51f)]*/}
+      {/*    transition-transform duration-300 ease-out*/}
+      {/*    group-hover:scale-x-100*/}
+      {/*  "*/}
+      {/*/>*/}
     </motion.div>
   );
 }

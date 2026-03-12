@@ -143,7 +143,7 @@ export default function WhyUs() {
                 {tags.map((tag) => (
                   <span
                     key={tag}
-                    className="inline-block px-3 py-1 text-xs font-semibold tracking-wide text-gray-100 uppercase bg-gray-900 rounded-full shadow transition-all duration-200 hover:text-[var(--autisync-gold,#b98b2f)] hover:-translate-y-0.5 hover:shadow-lg"
+                    className="inline-block px-3 py-1 text-xs font-semibold tracking-wide text-gray-100 uppercase bg-gray-900 rounded-full shadow transition-all duration-200 hover:text-[var(--autisync-gold,#b98b2f)]"
                   >
                     {tag}
                   </span>
@@ -151,9 +151,13 @@ export default function WhyUs() {
               </div>
 
                 {/* button */}
-                <button className="inline-flex justify-center px-4 py-2 mt-6 text-sm font-medium text-gray-50 bg-[var(--autisync-gold,#b98b2f)] border border-transparent rounded-md shadow-lg hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 transition-all hover:shadow-[0_16px_30px_rgba(0,0,0,0.18)]/10">
-                  <Link href="/servicepackage">Service Packages</Link>
-                </button>
+
+              <Link
+                  className="inline-flex justify-center mt-4 px-4 py-2 text-sm font-medium text-white bg-[var(--autisync-gold,#b98b2f)] border border-transparent rounded-md shadow-lg hover:bg-[#1C1C1C] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500 sm:mr-2 transition-all hover:shadow-[0_16px_30px_rgba(0,0,0,0.18)]/10"
+                  href="/servicepackage"
+              >
+                Service Packages
+              </Link>
               </div>
             </div>
           </div>

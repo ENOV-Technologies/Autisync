@@ -355,9 +355,9 @@ export default function Landing() {
             {/* Seamless services section */}
             <div className="w-full px-4 pt-10 ml-auto mr-auto md:w-4/12 group">
               <div className="
-                  relative flex flex-col w-full min-w-0 mb-6 break-words bg-white rounded-lg shadow-lg 
+                  relative flex flex-col w-full min-w-0 mb-6 break-words bg-white rounded-lg shadow-md
                   transition-all duration-300 ease-out 
-                  group-hover:-translate-y-2 group-hover:shadow-[0_20px_45px_rgba(0,0,0,0.25)]
+                  group-hover:-translate-y-2 group-hover:shadow-[0_20px_45px_rgba(0,0,0,0.25)]/10
                 "
               >
                 <img

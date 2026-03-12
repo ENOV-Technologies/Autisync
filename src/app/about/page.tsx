@@ -422,7 +422,7 @@ export default function AboutPage() {
       <section className="py-20 bg-gray-100">
         <div className="container px-4 mx-auto">
           <div className="mb-10 text-center max-w-xl mx-auto">
-            <p className="text-xs tracking-widest text-amber-700 font-semibold uppercase">
+            <p className="text-xs tracking-widest text-[var(--autisync-gold,#b98b2f)] font-semibold uppercase">
               Our Numbers
             </p>
             <h3 className="mt-1 text-3xl font-semibold text-gray-800">
@@ -453,7 +453,7 @@ export default function AboutPage() {
                 <div className="mt-2 text-sm text-slate-500">{stat.label}</div>
 
                 {/* Bottom gold accent bar */}
-                <div className="mt-6 h-1 w-full rounded-full bg-[var(--autisync-gold,#f2a51f)]" />
+                {/*<div className="mt-6 h-1 w-full rounded-full bg-[var(--autisync-gold,#f2a51f)]" />*/}
               </div>
             ))}
           </div>
@@ -508,9 +508,9 @@ export default function AboutPage() {
               <h2 className="text-4xl font-semibold text-gray-800">
                 Our Core Values
               </h2>
-              <p className="mt-4 text-lg text-gray-600">
-                The principles that guide everything we do
-              </p>
+              {/*<p className="mt-2 text-lg text-gray-600">*/}
+              {/*  The principles that guide everything we do*/}
+              {/*</p>*/}
             </div>
           </div>
 
@@ -666,7 +666,7 @@ export default function AboutPage() {
               <Link href="/contact" className="px-6 py-2 text-white bg-[var(--autisync-gold,#b98b2f)] rounded-md shadow-lg hover:bg-gray-900 transition-all hover:shadow-[0_16px_30px_rgba(0,0,0,0.25)]/10">
                 Get in Touch
             </Link>
-              <Link href="/servicepackage" className="px-6 py-2 text-gray-700 bg-gray-100 rounded-md shadow-lg hover:bg-gray-200 transition-all hover:shadow-[0_16px_30px_rgba(0,0,0,0.18)]/10">
+              <Link href="/servicepackage" className="px-6 py-2 text-gray-700 bg-gray-100 rounded-md shadow-lg hover:bg-[#1C1C1C] hover:text-white transition-all hover:shadow-[0_16px_30px_rgba(0,0,0,0.18)]/10">
                 View Our Services
             </Link>
           </div>
