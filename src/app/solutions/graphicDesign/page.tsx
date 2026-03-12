@@ -87,7 +87,7 @@ export default function CreativeDesign() {
                         </p>
                         <br />
                         <Link
-                            className="px-4 py-3 mb-1 text-xs text-white uppercase transition-all duration-150 ease-linear bg-gray-900 rounded shadow outline-none hover:bg-[var(--autisync-gold,#B98B2F)] hover:shadow-md focus:outline-none sm:mr-2 transition-all hover:shadow-[0_16px_30px_rgba(0,0,0,0.18)]/10"
+                            className="px-4 py-3 mb-1 text-xs text-white uppercase transition-all duration-150 ease-linear bg-[#1C1C1C] rounded shadow outline-none hover:bg-[var(--autisync-gold,#B98B2F)] hover:shadow-md focus:outline-none sm:mr-2 transition-all hover:shadow-[0_16px_30px_rgba(0,0,0,0.18)]/10"
                             href="/servicepackage/"
                         >
                             Check out Our Packages
@@ -95,7 +95,7 @@ export default function CreativeDesign() {
                     </div>
                     <div className="flex max-w-2xl mx-auto mt-16 sm:mt-24 lg:ml-10 lg:mr-0 lg:mt-0 lg:max-w-none lg:flex-none xl:ml-32">
                         <div className="flex-none max-w-3xl sm:max-w-5xl lg:max-w-none">
-                            <div className="p-2 -m-2 bg-gray-800 rounded-xl ring-1 ring-inset ring-gray-800 lg:-m-4 lg:rounded-2xl lg:p-4">
+                            <div className="p-2 -m-2 bg-[#1C1C1C] rounded-xl ring-1 ring-inset ring-gray-800 lg:-m-4 lg:rounded-2xl lg:p-4">
                                 <Image
                                     src="https://images.unsplash.com/photo-1518893494013-481c1d8ed3fd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80"
                                     alt="App screenshot"
@@ -119,7 +119,7 @@ export default function CreativeDesign() {
                         <p className="mt-2 text-3xl font-bold tracking-tight text-gray-700 sm:text-4xl">
                             Bespoke & Identifying Designs
                         </p>
-                        <p className="mt-6 text-base leading-8 text-gray-600">
+                        <p className="mt-3 text-base text-gray-600">
                             Developing the overall layout and production design for
                             applications such as advertisements, information platforms,
                             brochures, magazines, and reports.
@@ -154,7 +154,7 @@ export default function CreativeDesign() {
                             {services.map((service) => (
                                 <div
                                     key={service.name}
-                                    className="group block max-w-sm p-6 bg-white rounded-md shadow-md hover:bg-gray-800"
+                                    className="group block max-w-sm p-6 bg-white rounded-md shadow-md hover:bg-[#1C1C1C]"
                                 >
                                     {" "}
                                     <h5 className="group-hover:animate-bounce group-hover:text-white mb-2 text-2xl font-bold tracking-tight text-gray-900">

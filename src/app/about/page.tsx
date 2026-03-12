@@ -663,7 +663,7 @@ export default function AboutPage() {
             goals
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-              <Link href="/contact" className="px-6 py-2 text-white bg-[var(--autisync-gold,#b98b2f)] rounded-md shadow-lg hover:bg-gray-900 transition-all hover:shadow-[0_16px_30px_rgba(0,0,0,0.25)]/10">
+              <Link href="/contact" className="px-6 py-2 text-white bg-[var(--autisync-gold,#b98b2f)] rounded-md shadow-lg hover:bg-[#1C1C1C] transition-all hover:shadow-[0_16px_30px_rgba(0,0,0,0.25)]/10">
                 Get in Touch
             </Link>
               <Link href="/servicepackage" className="px-6 py-2 text-gray-700 bg-gray-100 rounded-md shadow-lg hover:bg-[#1C1C1C] hover:text-white transition-all hover:shadow-[0_16px_30px_rgba(0,0,0,0.18)]/10">

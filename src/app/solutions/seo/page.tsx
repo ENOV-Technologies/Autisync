@@ -118,10 +118,10 @@ export default function SEO() {
         <div className="px-6 pt-10 pb-24 mx-auto max-w-7xl sm:pb-32 lg:flex lg:px-8 lg:py-20">
           {/* LEFT HERO TEXT */}
           <div className="max-w-2xl mx-auto lg:mx-0 lg:max-w-xl lg:flex-shrink-0 lg:pt-8">
-            <p className="mt-4 text-sm font-semibold tracking-[0.2em] uppercase text-[var(--autisync-gold,#B98B2F)]">
+            <p className="mt-4 text-base font-base tracking-[0.2em] text-[var(--autisync-gold,#B98B2F)]">
               Reach Your Audience
             </p>
-            <h1 className="mt-4 text-4xl font-bold tracking-tight text-gray-800 sm:text-6xl">
+            <h1 className="mt-2 text-4xl font-bold tracking-tight text-gray-800 sm:text-6xl">
               SEO & Audience Engagement
             </h1>
             <p className="mt-6 text-base leading-8 text-gray-600">
@@ -157,7 +157,7 @@ export default function SEO() {
           {/* RIGHT HERO IMAGE */}
           <div className="flex max-w-2xl mx-auto mt-16 sm:mt-24 lg:ml-10 lg:mr-0 lg:mt-0 lg:max-w-none lg:flex-none xl:ml-32">
             <div className="flex-none max-w-3xl sm:max-w-5xl lg:max-w-none">
-              <div className="p-2 -m-2 bg-gray-800 rounded-xl ring-1 ring-inset ring-gray-800 lg:-m-4 lg:rounded-2xl lg:p-4">
+              <div className="p-2 -m-2 bg-[#1C1C1C] rounded-xl ring-1 ring-inset ring-gray-800 lg:-m-4 lg:rounded-2xl lg:p-4">
                 <Image
                   src="https://images.unsplash.com/photo-1557838923-2985c318be48?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1931&q=80"
                   alt="SEO dashboards and analytics"
@@ -175,13 +175,13 @@ export default function SEO() {
       <div className="py-12 bg-gray-100 sm:py-16">
         <div className="px-6 mx-auto max-w-7xl lg:px-8">
           <div className="max-w-2xl mx-auto sm:text-center">
-            <h2 className="text-base font-semibold leading-7 text-[var(--autisync-gold,#B98B2F)]">
+            <h2 className="text-base font-base leading-7 text-[var(--autisync-gold,#B98B2F)]">
               Everything you need
             </h2>
             <p className="mt-2 text-3xl font-bold tracking-tight text-gray-700 sm:text-4xl">
               A One-Stop SEO Partner
             </p>
-            <p className="mt-4 text-base text-gray-600">
+            <p className="mt-2 text-base text-gray-600">
               From audits to implementation and reporting, we handle the entire
               SEO workflow so you don’t have to juggle multiple freelancers or
               tools.
@@ -226,13 +226,13 @@ export default function SEO() {
       <section className="bg-white py-16 sm:py-20 border-t border-gray-200">
         <div className="max-w-7xl px-6 mx-auto lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-base font-semibold tracking-[0.25em] uppercase text-[var(--autisync-gold,#B98B2F)]">
+            <h2 className="text-base font-base uppercase text-[var(--autisync-gold,#B98B2F)]">
               Our Approach
             </h2>
             <p className="mt-2 text-3xl font-bold tracking-tight text-gray-800 sm:text-4xl">
               How Our SEO Process Works
             </p>
-            <p className="mt-4 text-base text-gray-600">
+            <p className="mt-2 text-base text-gray-600">
               Clear, transparent steps so you always know what’s happening and
               what comes next.
             </p>
@@ -258,14 +258,14 @@ export default function SEO() {
       </section>
 
       {/* SIMPLE CASE STUDY / RESULT HIGHLIGHT */}
-      <section className="bg-gray-900 py-16 sm:py-20">
+      <section className="bg-[#1C1C1C] py-16 sm:py-20">
         <div className="max-w-6xl px-6 mx-auto lg:px-8">
           <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
             <div>
-              <p className="text-sm font-semibold tracking-[0.25em] uppercase text-[var(--autisync-gold,#B98B2F)]">
+              <p className="text-base font-base text-[var(--autisync-gold,#B98B2F)]">
                 Example Outcome
               </p>
-              <h2 className="mt-3 text-3xl font-bold text-white sm:text-4xl">
+              <h2 className="mt-2 text-3xl font-bold text-white sm:text-4xl">
                 From invisible to visible in local search.
               </h2>
               <p className="mt-4 text-sm text-gray-300">
@@ -281,7 +281,7 @@ export default function SEO() {
               </ul>
             </div>
 
-            <div className="rounded-2xl border border-gray-700 bg-gray-800/60 p-6 shadow-lg">
+            <div className="rounded-2xl border border-gray-700 bg-[#1C1C1C]/60 p-6 shadow-lg">
               <h3 className="text-lg font-semibold text-white">
                 What you can expect from working with us
               </h3>
@@ -313,15 +313,15 @@ export default function SEO() {
 
       {/* FAQ SECTION */}
       <section className="bg-gray-100 py-16 sm:py-20 border-t border-gray-200">
-        <div className="max-w-5xl px-6 mx-auto lg:px-8">
+        <div className="max-w-3xl px-6 mx-auto lg:px-8">
           <div className="text-center">
-            <h2 className="text-base font-semibold tracking-[0.25em] uppercase text-[var(--autisync-gold,#B98B2F)]">
+            <h2 className="text-base font-base text-[var(--autisync-gold,#B98B2F)]">
               Questions
             </h2>
             <p className="mt-2 text-3xl font-bold tracking-tight text-gray-800 sm:text-4xl">
               SEO FAQs
             </p>
-            <p className="mt-4 text-sm text-gray-600">
+            <p className="mt-2 text-base text-gray-600">
               If something isn’t covered here, you can always reach out and ask
               directly — we’re happy to clarify anything.
             </p>
@@ -331,7 +331,7 @@ export default function SEO() {
             {faqItems.map((item) => (
               <details
                 key={item.question}
-                className="group rounded-2xl border border-gray-200 bg-white px-5 py-4"
+                className="group rounded-lg border border-gray-200 bg-white px-5 py-4"
               >
                 <summary className="flex cursor-pointer items-center justify-between text-sm font-semibold text-gray-800 list-none">
                   <span>{item.question}</span>

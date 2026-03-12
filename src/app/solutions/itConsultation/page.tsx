@@ -111,7 +111,7 @@ export default function Example() {
                     <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
                         <div className="lg:pr-4">
                             <div className="lg:max-w-lg">
-                                                  <h1 className="mt-10 text-lg font-light text-[var(--autisync-gold,#B98B2F)]">
+                                                  <h1 className="mt-10 text-base font-base text-[var(--autisync-gold,#B98B2F)]">
                     IT Consultation Services.
                   </h1>
                                 <h2 className=" text-4xl font-bold tracking-tight text-gray-700 sm:text-6xl">
@@ -125,7 +125,7 @@ export default function Example() {
                                 </p>
                                 <br />
                                 <Link
-                                    className="px-4 py-3 mb-1 text-xs  text-white uppercase transition-all duration-150 ease-linear bg-[var(--autisync-gold,#B98B2F)] rounded shadow outline-none hover:bg-gray-900 hover:shadow-md focus:outline-none sm:mr-2"
+                                    className="px-4 py-3 mb-1 text-xs  text-white uppercase transition-all duration-150 ease-linear bg-[var(--autisync-gold,#B98B2F)] rounded shadow outline-none hover:bg-[#1C1C1C] hover:shadow-md focus:outline-none sm:mr-2"
                                     href="/servicepackage/"
                                 >
                                     Checkout Our Packages
@@ -135,7 +135,7 @@ export default function Example() {
                     </div>
                     <div className="p-12 -mt-12 -ml-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
                         <img
-                            className="w-[48rem] max-w-none rounded-xl bg-gray-900 shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem]"
+                            className="w-[48rem] max-w-none rounded-xl bg-[#1C1C1C] shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem]"
                             src="https://images.unsplash.com/photo-1507099985932-87a4520ed1d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80"
                             alt=""
                         />
@@ -219,7 +219,7 @@ export default function Example() {
                         {services.map((service) => (
                             <div
                                 key={service.name}
-                                className="group block max-w-sm p-6 bg-white rounded-md shadow-md hover:bg-gray-800"
+                                className="group block max-w-sm p-6 bg-white rounded-md shadow-md hover:bg-[#1C1C1C]"
                             >
                                 {" "}
                                 <h5 className="group-hover:animate-bounce group-hover:text-white mb-2 text-2xl font-bold tracking-tight text-gray-800">
@@ -236,7 +236,7 @@ export default function Example() {
                     <div className="">
                         <Link
                             href="mailto:info@enovtechnologies.com"
-                            className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white hover:text-gray-100"
+                            className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-[#1C1C1C] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white hover:text-gray-100"
                         >
                             How can We Attend to Your IT Needs?
                         </Link>

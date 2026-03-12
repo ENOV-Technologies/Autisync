@@ -99,7 +99,7 @@ export default function DevService() {
                 </svg>
                 <div className="px-6 pt-10 pb-24 mx-auto max-w-7xl sm:pb-32 lg:flex lg:px-8 lg:py-20">
                     <div className="max-w-2xl mx-auto lg:mx-0 lg:max-w-xl lg:flex-shrink-0 lg:pt-8">
-                        <h1 className="mt-10 text-lg  text-[var(--autisync-gold,#B98B2F)]">
+                        <h1 className="mt-10 text-base font-base text-[var(--autisync-gold,#B98B2F)]">
                 Platforms that assist
               </h1>
                         <h2 className="text-4xl font-bold tracking-tight text-gray-700 sm:text-6xl">
@@ -114,7 +114,7 @@ export default function DevService() {
                         </p>
                         <br/>
                         <Link
-                            className="px-4 py-3 mb-1 text-xs text-white uppercase transition-all duration-150 ease-linear bg-[var(--autisync-gold,#B98B2F)] rounded shadow outline-none hover:bg-gray-900 hover:shadow-md focus:outline-none sm:mr-2 transition-all hover:shadow-[0_16px_30px_rgba(0,0,0,0.18)]/10"
+                            className="px-4 py-3 mb-1 text-xs text-white uppercase transition-all duration-150 ease-linear bg-[var(--autisync-gold,#B98B2F)] rounded shadow outline-none hover:bg-[#1C1C1C] hover:shadow-md focus:outline-none sm:mr-2 transition-all hover:shadow-[0_16px_30px_rgba(0,0,0,0.18)]/10"
                             type="button"
                              href="/servicepackage/"
                         >
@@ -123,7 +123,7 @@ export default function DevService() {
                     </div>
                     <div className="flex max-w-2xl mx-auto mt-16 sm:mt-24 lg:ml-10 lg:mr-0 lg:mt-0 lg:max-w-none lg:flex-none xl:ml-32">
                         <div className="flex-none max-w-3xl sm:max-w-5xl lg:max-w-none">
-                            <div className="p-2 -m-2 bg-gray-800 rounded-xl ring-1 ring-inset ring-gray-800 lg:-m-4 lg:rounded-2xl lg:p-4">
+                            <div className="p-2 -m-2 bg-[#1C1C1C] rounded-xl ring-1 ring-inset ring-gray-800 lg:-m-4 lg:rounded-2xl lg:p-4">
                                 <Image
                                     src="https://images.pexels.com/photos/7988210/pexels-photo-7988210.jpeg"
                                     alt="App screenshot"
@@ -186,7 +186,7 @@ export default function DevService() {
             </div>
 
             {/* Services */}
-            <div className="py-24 bg-gray-800 sm:py-32">
+            <div className="py-24 bg-[#1C1C1C] sm:py-32">
                 <div className="px-6 mx-auto max-w-7xl lg:px-8">
                     <div className="max-w-2xl mx-auto lg:mx-0">
                         <h2 className="text-base leading-7 text-[var(--autisync-gold,#B98B2F)] font-base">
@@ -231,7 +231,7 @@ export default function DevService() {
                             <Link
                                 href="tel:+244927114400"
                                 target="_blank"
-                                className="rounded-md bg-white px-3.5 py-2.5 text-sm text-gray-900 shadow-md hover:bg-gray-800 hover:text-gray-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white hover:shadow-lg transition-all hover:shadow-[0_16px_30px_rgba(0,0,0,0.18)]/10"
+                                className="rounded-md bg-white px-3.5 py-2.5 text-sm text-gray-900 shadow-md hover:bg-[#1C1C1C] hover:text-gray-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white hover:shadow-lg transition-all hover:shadow-[0_16px_30px_rgba(0,0,0,0.18)]/10"
                             >
                                 Give Us a Call
                             </Link>

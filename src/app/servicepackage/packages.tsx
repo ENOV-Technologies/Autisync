@@ -80,7 +80,7 @@ function classNames(...classes: string[]) {
 
 export default function Packages() {
   return (
-    <div className="py-16 bg-gray-100 rounded-3xl">
+    <div className="py-16 bg-gray-100 rounded-lg">
       <div className="px-6 mx-auto max-w-7xl lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-base font-semibold leading-7 text-[#B28228]">
@@ -158,7 +158,7 @@ export default function Packages() {
 
       <div className="object-none object-center max-w-4xl p-4 mx-auto text-center">
         <Link
-          className="inline-flex justify-center px-4 py-2 text-sm font-medium text-white bg-[#3B3B3B] border border-transparent rounded-md shadow-lg hover:bg-[#B28228] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#B28228] sm:mr-2"
+          className="inline-flex justify-center px-4 py-2 text-sm font-medium text-white bg-[#3B3B3B]  rounded-md shadow-lg hover:bg-[#B28228] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#B28228] sm:mr-2"
           href="/contact/"
         >
           Get a Proposal

@@ -76,7 +76,7 @@ const BrandingGrid = () => {
           </ul>
           <a
             href="https://wa.me/+447883317646?text=I would like to learn more about your branding services."
-            className="mt-6 inline-block w-full text-center py-2 px-4 rounded-md font-semibold border border-[#B28228] text-[#B28228] hover:bg-[#B28228] hover:text-white transition"
+            className="mt-6 inline-block w-full text-center py-2 px-4 rounded-md font-semibold  -[#B28228] text-[#B28228] hover:bg-[#B28228] hover:text-white transition"
             target="_blank"
           >
             Contact Us for a Meeting
@@ -103,7 +103,7 @@ const SocialMediaPackages = () => (
 
     <div className="grid grid-cols-1 gap-8 mt-12 sm:grid-cols-3">
       {/* Basic Package */}
-      <div className="p-6 border rounded-3xl shadow-sm ring-1 ring-gray-200 bg-white">
+      <div className="p-6  rounded-lg shadow-sm ring-1 ring-gray-200 bg-white">
         <h3 className="text-xl font-semibold text-[#B28228]">Basic Package</h3>
         <ul className="mt-4 space-y-2 text-sm text-gray-600">
           <li>📅 8 posts/month (design + text)</li>
@@ -113,7 +113,7 @@ const SocialMediaPackages = () => (
         </ul>
         <a
           href="https://wa.me/+447883317646?text=I’m interested in the Basic Social Media Management package"
-          className="inline-block w-full mt-6 text-center text-sm font-semibold text-[#B28228] border border-[#B28228] py-2 rounded hover:bg-[#B28228] hover:text-white transition"
+          className="inline-block w-full mt-6 text-center text-sm font-semibold text-[#B28228]  -[#B28228] py-2 rounded hover:bg-[#B28228] hover:text-white transition"
           target="_blank"
         >
           Contact Us
@@ -121,7 +121,7 @@ const SocialMediaPackages = () => (
       </div>
 
       {/* Intermediate Package */}
-      <div className="p-6 border rounded-3xl shadow-sm ring-1 ring-gray-200 bg-[#F9F6F0]">
+      <div className="p-6  rounded-lg shadow-sm ring-1 ring-gray-200 bg-[#F9F6F0]">
         <h3 className="text-xl font-semibold text-[#B28228]">
           Intermediate Package
         </h3>
@@ -134,7 +134,7 @@ const SocialMediaPackages = () => (
         </ul>
         <a
           href="https://wa.me/+447883317646?text=I’m interested in the Intermediate Social Media Management package"
-          className="inline-block w-full mt-6 text-center text-sm font-semibold text-[#B28228] border border-[#B28228] py-2 rounded hover:bg-[#B28228] hover:text-white transition"
+          className="inline-block w-full mt-6 text-center text-sm font-semibold text-[#B28228]  -[#B28228] py-2 rounded hover:bg-[#B28228] hover:text-white transition"
           target="_blank"
         >
           Contact Us
@@ -142,7 +142,7 @@ const SocialMediaPackages = () => (
       </div>
 
       {/* Premium Package */}
-      <div className="p-6 border rounded-3xl shadow-sm ring-1 ring-gray-200 bg-white">
+      <div className="p-6  rounded-lg shadow-sm ring-1 ring-gray-200 bg-white">
         <h3 className="text-xl font-semibold text-[#B28228]">
           Premium Package
         </h3>
@@ -155,7 +155,7 @@ const SocialMediaPackages = () => (
         </ul>
         <a
           href="https://wa.me/+447883317646?text=I’m interested in the Premium Social Media Management package"
-          className="inline-block w-full mt-6 text-center text-sm font-semibold text-[#B28228] border border-[#B28228] py-2 rounded hover:bg-[#B28228] hover:text-white transition"
+          className="inline-block w-full mt-6 text-center text-sm font-semibold text-[#B28228]  -[#B28228] py-2 rounded hover:bg-[#B28228] hover:text-white transition"
           target="_blank"
         >
           Contact Us
@@ -199,10 +199,10 @@ export default function ServicePackagesPage() {
 
   return (
     <div className="bg-[#F9F9F9]">
-      <div className="py-16 my-6 px-6 mx-auto max-w-7xl">
+      <div className="py-16 mt-12 px-6 mx-auto max-w-7xl">
         {/* Top intro */}
         <div className="text-center mb-12 max-w-3xl mx-auto">
-          <h2 className="text-base font-semibold leading-7 text-[#B28228]">
+          <h2 className="text-base font-base text-[#B28228]">
             Flexible Solutions for Your Brand
           </h2>
           <p className="mt-2 text-4xl font-bold tracking-tight text-[#3B3B3B] sm:text-5xl">
@@ -261,7 +261,7 @@ export default function ServicePackagesPage() {
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.35, ease: "easeInOut" }}
                     >
-                      <div className="border-t border-gray-100 px-6 py-8">
+                      <div className="-t -gray-100 px-6 py-8">
                         {section.content}
                       </div>
                     </motion.div>

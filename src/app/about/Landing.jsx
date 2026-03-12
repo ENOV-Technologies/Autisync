@@ -4,7 +4,7 @@ export default function Landing() {
   return (
     <>
       {/* Landing */}
-      <div className="relative flex items-center content-center justify-center pt-20 pb-32 h-dvh">
+      <div className="relative flex items-center content-center justify-center pt-20 pb-32 ">
         <div
           className="absolute top-0 w-full h-full bg-center bg-cover"
           style={{
@@ -14,7 +14,7 @@ export default function Landing() {
         >
           <span
             id="blackOverlay"
-            className="absolute w-full h-full bg-black opacity-75"
+            className="absolute w-full h-full bg-black opacity-95"
           ></span>
         </div>
 
