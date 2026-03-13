@@ -118,7 +118,7 @@ export default function SEO() {
         <div className="px-6 pt-10 pb-24 mx-auto max-w-7xl sm:pb-32 lg:flex lg:px-8 lg:py-20">
           {/* LEFT HERO TEXT */}
           <div className="max-w-2xl mx-auto lg:mx-0 lg:max-w-xl lg:flex-shrink-0 lg:pt-8">
-            <p className="mt-4 text-base font-base tracking-[0.2em] text-[var(--autisync-gold,#B98B2F)]">
+            <p className="mt-4 text-base font-base text-[var(--autisync-gold,#B98B2F)]">
               Reach Your Audience
             </p>
             <h1 className="mt-2 text-4xl font-bold tracking-tight text-gray-800 sm:text-6xl">
