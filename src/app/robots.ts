@@ -1,0 +1,15 @@
+import type { MetadataRoute } from "next";
+import type { Metadata } from "next";
+
+export default function robots(): MetadataRoute.Robots {
+    return {
+        rules: [
+            {
+                userAgent: "*",
+                allow: "/",
+                disallow: ["/api/", "/ServiceQuestionaire"],
+            },
+        ],
+        sitemap: "https://www.autisync.com/sitemap.xml",
+    };
+}

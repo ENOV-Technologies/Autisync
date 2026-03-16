@@ -1,3 +1,5 @@
+"use client";
+
 import * as React from "react";
 import Link from "next/link";
 import CallToAction from "@/app/components/CallToAction";
@@ -165,7 +167,7 @@ export default function Footer() {
                   </li>
                   <li>
                     <Link
-                      href="/solutions"
+                      href="/src/app/(main)/solutions"
                       className="block pb-2 text-sm hover:text-[#B28228]"
                     >
                       Solutions
@@ -190,7 +192,7 @@ export default function Footer() {
                 <ul className="list-none">
                   <li>
                     <Link
-                      href="/ServiceQuestionaire"
+                      href="/servicequestionaire"
                       className="block pb-2 text-sm hover:text-[#B28228]"
                     >
                       Service Questionnaire
