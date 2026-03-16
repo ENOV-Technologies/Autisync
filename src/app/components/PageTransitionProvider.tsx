@@ -27,7 +27,15 @@ const logoPaths = [
     },
 ];
 
-function AnimatedPath({ d, fill, delay }: { d: string; fill: string; delay: number }) {
+function AnimatedPath({
+                          d,
+                          fill,
+                          delay,
+                      }: {
+    d: string;
+    fill: string;
+    delay: number;
+}) {
     return (
         <motion.path
             d={d}
@@ -56,12 +64,11 @@ function PageLoader() {
                 alignItems: "center",
                 justifyContent: "center",
                 backgroundColor: "#f5f4f0",
-                pointerEvents: "all",
             }}
         >
             {/* Gold top bar */}
             <motion.div
-                initial={{ scaleX: 0, transformOrigin: "left" }}
+                initial={{ scaleX: 0 }}
                 animate={{ scaleX: 1 }}
                 transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
                 style={{
@@ -70,6 +77,7 @@ function PageLoader() {
                     left: 0,
                     right: 0,
                     height: 2,
+                    transformOrigin: "left",
                     background: "linear-gradient(to right, #7a5a1d, #d1a94c, #7a5a1d)",
                 }}
             />
@@ -86,8 +94,6 @@ function PageLoader() {
                         <AnimatedPath key={i} d={p.d} fill={p.fill} delay={p.delay} />
                     ))}
                 </svg>
-
-                {/* Glow pulse */}
                 <motion.div
                     animate={{ opacity: [0.15, 0.4, 0.15], scale: [0.9, 1.2, 0.9] }}
                     transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
@@ -113,12 +119,13 @@ function PageLoader() {
                     letterSpacing: "0.35em",
                     color: "#1d1e1e",
                     marginTop: 10,
+                    marginBottom: 0,
                 }}
             >
                 AUTISYNC
             </motion.p>
 
-            {/* Bottom progress bar — animates from 0 to 85% then waits */}
+            {/* Progress bar */}
             <motion.div
                 initial={{ width: "0%" }}
                 animate={{ width: "85%" }}
@@ -136,6 +143,10 @@ function PageLoader() {
 }
 
 // ─── Provider ─────────────────────────────────────────────────────────────────
+// Strategy: show loader when pathname changes, hide it once the browser
+// has completed TWO animation frames on the new pathname (guarantees paint).
+
+const MIN_MS = 600; // minimum display time so it never just flashes
 
 export default function PageTransitionProvider({
                                                    children,
@@ -144,73 +155,44 @@ export default function PageTransitionProvider({
 }) {
     const pathname = usePathname();
     const [loading, setLoading] = useState(false);
-    const prevPathRef = useRef(pathname);
-    // Minimum display time so the animation doesn't flash for <200ms
-    const MIN_DISPLAY_MS = 600;
-    const startTimeRef = useRef<number>(0);
+    const [displayedPath, setDisplayedPath] = useState(pathname);
+    const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+    const startRef = useRef(0);
 
-    // Step 1 — show loader when pathname changes
     useEffect(() => {
-        if (pathname !== prevPathRef.current) {
-            prevPathRef.current = pathname;
-            startTimeRef.current = Date.now();
-            setLoading(true);
-        }
-    }, [pathname]);
+        // pathname just changed — show the loader
+        if (pathname === displayedPath) return;
 
-    // Step 2 — hide loader once children have painted (next frame after mount)
-    // We use a layout effect on the children wrapper via a sentinel component.
-    // The sentinel calls onReady after the first paint of the new route.
-    const handlePageReady = () => {
-        if (!loading) return;
-        const elapsed = Date.now() - startTimeRef.current;
-        const remaining = Math.max(0, MIN_DISPLAY_MS - elapsed);
-        setTimeout(() => setLoading(false), remaining);
-    };
+        startRef.current = Date.now();
+        setLoading(true);
+
+        // Double-rAF: waits for the browser to complete layout + paint of the
+        // new page before we start the countdown to dismiss.
+        const raf1 = requestAnimationFrame(() => {
+            const raf2 = requestAnimationFrame(() => {
+                const elapsed = Date.now() - startRef.current;
+                const wait = Math.max(0, MIN_MS - elapsed);
+
+                timerRef.current = setTimeout(() => {
+                    setDisplayedPath(pathname);
+                    setLoading(false);
+                }, wait);
+            });
+            return () => cancelAnimationFrame(raf2);
+        });
+
+        return () => {
+            cancelAnimationFrame(raf1);
+            if (timerRef.current) clearTimeout(timerRef.current);
+        };
+    }, [pathname]); // eslint-disable-line react-hooks/exhaustive-deps
 
     return (
         <>
             <AnimatePresence mode="wait">
                 {loading && <PageLoader key={`loader-${pathname}`} />}
             </AnimatePresence>
-
-            <PageContent onReady={handlePageReady} loading={loading}>
-                {children}
-            </PageContent>
-        </>
-    );
-}
-
-// ─── PageContent — fires onReady after the new route paints ──────────────────
-
-function PageContent({
-                         children,
-                         onReady,
-                         loading,
-                     }: {
-    children: React.ReactNode;
-    onReady: () => void;
-    loading: boolean;
-}) {
-    const pathname = usePathname();
-
-    useEffect(() => {
-        // requestAnimationFrame ensures the DOM has painted before we dismiss
-        const raf = requestAnimationFrame(() => {
-            onReady();
-        });
-        return () => cancelAnimationFrame(raf);
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [pathname]);
-
-    return (
-        <motion.div
-            key={pathname}
-            initial={{ opacity: 0, y: 6 }}
-            animate={{ opacity: loading ? 0 : 1, y: loading ? 6 : 0 }}
-            transition={{ duration: 0.3, ease: "easeOut" }}
-        >
             {children}
-        </motion.div>
+        </>
     );
 }
