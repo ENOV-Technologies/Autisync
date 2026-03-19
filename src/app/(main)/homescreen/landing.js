@@ -35,123 +35,165 @@ function ServiceIcon3D({ children, gradient }) {
 /* ========= Inline SVG Icons ========= */
 
 const MarketingSeoIcon = ({ className = "w-5 h-5" }) => (
-  <svg
-    viewBox="0 0 24 24"
-    className={className}
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="1.7"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <rect x="3.5" y="11" width="3" height="8" rx="1" />
-    <rect x="10.5" y="8" width="3" height="11" rx="1" />
-    <rect x="17.5" y="5" width="3" height="14" rx="1" />
-    <circle cx="9" cy="6" r="2" />
-  </svg>
+    <svg
+        viewBox="0 0 24 24"
+        className={className}
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+    >
+      {/* Bar chart — evenly spaced, bottom-aligned at y=20 */}
+      <rect x="3" y="13" width="3.5" height="7" rx="1" />
+      <rect x="10.25" y="9" width="3.5" height="11" rx="1" />
+      <rect x="17.5" y="5" width="3.5" height="15" rx="1" />
+      {/* Trend line arc connecting bar tops — implies SEO growth */}
+      <path d="M4.75 12.5c2.5-3 5-4.5 8-5.5" strokeWidth="1.3" strokeDasharray="1.5 1.5" />
+      {/* Magnifier overlay — the "search" in SEO */}
+      <circle cx="8.5" cy="7" r="2.5" />
+      <path d="M10.3 8.8l1.7 1.7" />
+    </svg>
 );
 
 const WebDevIcon = ({ className = "w-5 h-5" }) => (
-  <svg
-    viewBox="0 0 24 24"
-    className={className}
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="1.7"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <rect x="3.5" y="5.5" width="17" height="13" rx="2" />
-    <path d="M3.5 9.5h17" />
-    <path d="M9 13.5l-2 2 2 2" />
-    <path d="M15 13.5l2 2-2 2" />
-  </svg>
+    <svg
+        viewBox="0 0 24 24"
+        className={className}
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+    >
+      {/* Browser chrome */}
+      <rect x="3" y="5" width="18" height="14" rx="2" />
+      <path d="M3 9h18" />
+      {/* Traffic lights */}
+      <circle cx="6.5" cy="7" r="0.8" strokeWidth="1.2" />
+      <circle cx="9.2" cy="7" r="0.8" strokeWidth="1.2" />
+      <circle cx="11.9" cy="7" r="0.8" strokeWidth="1.2" />
+      {/* Code chevrons — optically centered in content area */}
+      <path d="M8.5 13.5L6 15.5l2.5 2" />
+      <path d="M15.5 13.5L18 15.5l-2.5 2" />
+      <path d="M13 12.5l-2 6" strokeWidth="1.3" />
+    </svg>
 );
 
 const ITSupportIcon = ({ className = "w-5 h-5" }) => (
-  <svg
-    viewBox="0 0 24 24"
-    className={className}
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="1.7"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <circle cx="12" cy="10" r="4" />
-    <path d="M6 18.5c1.3-1.6 3.1-2.5 6-2.5s4.7.9 6 2.5" />
-    <path d="M5 10h-1v3h1" />
-    <path d="M19 10h1v3h-1" />
-  </svg>
+    <svg
+        viewBox="0 0 24 24"
+        className={className}
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+    >
+      {/* Headset ear cup */}
+      <path d="M5 11a7 7 0 0 1 14 0" />
+      {/* Left earpiece */}
+      <path d="M5 11v3a1.5 1.5 0 0 0 3 0v-3" />
+      {/* Right earpiece */}
+      <path d="M16 11v3a1.5 1.5 0 0 0 3 0v-3" />
+      {/* Mic boom arm */}
+      <path d="M7.5 17.5c0 1.5 1 2.5 4.5 2.5" />
+      <path d="M12 20v.5" />
+      <circle cx="12" cy="21" r="0.6" strokeWidth="1.2" />
+    </svg>
 );
 
 const UiUxIcon = ({ className = "w-5 h-5" }) => (
-  <svg
-    viewBox="0 0 24 24"
-    className={className}
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="1.7"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <rect x="4" y="4.5" width="16" height="10" rx="2" />
-    <path d="M4 9.5h16" />
-    <circle cx="8" cy="7.2" r="0.9" />
-    <circle cx="11" cy="7.2" r="0.9" />
-    <circle cx="14" cy="7.2" r="0.9" />
-    <path d="M10 18.5l2-3 2 3" />
-  </svg>
+    <svg
+        viewBox="0 0 24 24"
+        className={className}
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+    >
+      {/* Outer frame */}
+      <rect x="3" y="4" width="18" height="13" rx="2" />
+      {/* Toolbar divider */}
+      <path d="M3 8.5h18" />
+      {/* Window dots */}
+      <circle cx="6.5" cy="6.25" r="0.8" strokeWidth="1.2" />
+      <circle cx="9.2" cy="6.25" r="0.8" strokeWidth="1.2" />
+      {/* Content layout blocks — sidebar + main */}
+      <rect x="5.5" y="11" width="4" height="4" rx="0.8" strokeWidth="1.3" />
+      <path d="M12 11.5h6" strokeWidth="1.3" />
+      <path d="M12 13.5h4.5" strokeWidth="1.3" />
+      {/* Stand */}
+      <path d="M10 17l1.5 2.5h1L14 17" />
+      <path d="M9 19.5h6" />
+    </svg>
 );
 
 const GraphicIcon = ({ className = "w-5 h-5" }) => (
-  <svg
-    viewBox="0 0 24 24"
-    className={className}
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="1.7"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <path d="M5 5.5h6l-2 6h-6z" />
-    <path d="M13 4.5l4 4-7 7-3 1 1-3z" />
-    <circle cx="17.5" cy="6.5" r="1.2" />
-  </svg>
+    <svg
+        viewBox="0 0 24 24"
+        className={className}
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+    >
+      {/* Pen tool body */}
+      <path d="M14 4l6 6-9.5 9.5-2.5.5-1.5-1.5.5-2.5z" />
+      {/* Pen nib crease */}
+      <path d="M14 4l2 2" strokeWidth="1.2" />
+      {/* Anchor point at tip */}
+      <path d="M4.5 19.5l2-2" />
+      {/* Bezier handle dot */}
+      <circle cx="19" cy="5" r="1.3" strokeWidth="1.3" />
+    </svg>
 );
 
 const AppDevIcon = ({ className = "w-5 h-5" }) => (
-  <svg
-    viewBox="0 0 24 24"
-    className={className}
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="1.7"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <rect x="7" y="3.5" width="10" height="17" rx="2" />
-    <path d="M10 8.5h4" />
-    <path d="M10 12h4" />
-    <circle cx="12" cy="17" r="0.9" />
-  </svg>
+    <svg
+        viewBox="0 0 24 24"
+        className={className}
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+    >
+      {/* Phone outline */}
+      <rect x="7" y="3" width="10" height="18" rx="2.5" />
+      {/* Top notch/speaker */}
+      <path d="M10.5 6h3" strokeWidth="1.3" />
+      {/* Screen content — code lines */}
+      <path d="M10 10l-1.5 1.5L10 13" strokeWidth="1.3" />
+      <path d="M14 10l1.5 1.5L14 13" strokeWidth="1.3" />
+      <path d="M12.5 9.5l-1 5" strokeWidth="1.2" />
+      {/* Home indicator */}
+      <path d="M10.5 17.5h3" strokeWidth="1.3" />
+    </svg>
 );
 
 const WhoWeAreIcon = ({ className = "w-6 h-6" }) => (
-  <svg
-    viewBox="0 0 24 24"
-    className={className}
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="1.7"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <circle cx="9" cy="9" r="2.4" />
-    <circle cx="15" cy="9.5" r="2.1" />
-    <path d="M5.5 17.5c.6-1.7 2.1-2.8 3.9-2.8s3.4 1.1 3.9 2.8" />
-    <path d="M13 17.3c.5-1.3 1.5-2.1 2.7-2.1 1.1 0 2 .6 2.6 1.7" />
-  </svg>
+    <svg
+        viewBox="0 0 24 24"
+        className={className}
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+    >
+      {/* Center/primary person */}
+      <circle cx="12" cy="7.5" r="2.8" />
+      <path d="M6.5 19a5.5 5.5 0 0 1 11 0" />
+      {/* Left secondary person — smaller, slightly behind */}
+      <circle cx="5.5" cy="9.5" r="2" strokeWidth="1.4" />
+      <path d="M2 18.5a3.5 3.5 0 0 1 5-2.3" strokeWidth="1.3" />
+      {/* Right secondary person */}
+      <circle cx="18.5" cy="9.5" r="2" strokeWidth="1.4" />
+      <path d="M22 18.5a3.5 3.5 0 0 0-5-2.3" strokeWidth="1.3" />
+    </svg>
 );
 
 export default function Landing() {

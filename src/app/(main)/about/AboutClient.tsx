@@ -50,14 +50,19 @@ const BookIcon = ({ className }: { className?: string }) => (
         className={className}
         fill="none"
         stroke="currentColor"
-        strokeWidth={1.7}
+        strokeWidth={1.6}
         strokeLinecap="round"
         strokeLinejoin="round"
     >
-        <path d="M4.5 5.5A2.5 2.5 0 0 1 7 3h11v15H7a2.5 2.5 0 0 0-2.5 2.5V5.5Z" />
-        <path d="M7 3v15" />
-        <path d="M10 7h5" />
-        <path d="M10 10h3.5" />
+        {/* Spine + cover */}
+        <path d="M4 19.5V5a2 2 0 0 1 2-2h13a.5.5 0 0 1 .5.5v15a.5.5 0 0 1-.5.5H6a2 2 0 0 0-2 2" />
+        {/* Bottom of spine rounding into base */}
+        <path d="M4 19.5A2 2 0 0 0 6 21.5h13.5" />
+        {/* Spine divider line */}
+        <path d="M8 2v20" />
+        {/* Text lines */}
+        <path d="M11.5 7h5" />
+        <path d="M11.5 10.5h3.5" />
     </svg>
 );
 
@@ -67,14 +72,18 @@ const ProjectsIcon = ({ className }: { className?: string }) => (
         className={className}
         fill="none"
         stroke="currentColor"
-        strokeWidth={1.7}
+        strokeWidth={1.6}
         strokeLinecap="round"
         strokeLinejoin="round"
     >
-        <rect x="3.5" y="3.5" width="7" height="7" rx="1.5" />
-        <rect x="13.5" y="3.5" width="7" height="7" rx="1.5" />
-        <rect x="3.5" y="13.5" width="7" height="7" rx="1.5" />
-        <rect x="13.5" y="13.5" width="7" height="7" rx="1.5" />
+        {/* Top-left */}
+        <rect x="3" y="3" width="8" height="8" rx="1.5" />
+        {/* Top-right */}
+        <rect x="13" y="3" width="8" height="8" rx="1.5" />
+        {/* Bottom-left */}
+        <rect x="3" y="13" width="8" height="8" rx="1.5" />
+        {/* Bottom-right — slightly offset to imply depth/stack */}
+        <rect x="13" y="13" width="8" height="8" rx="1.5" />
     </svg>
 );
 
@@ -84,14 +93,16 @@ const SatisfactionIcon = ({ className }: { className?: string }) => (
         className={className}
         fill="none"
         stroke="currentColor"
-        strokeWidth={1.7}
+        strokeWidth={1.6}
         strokeLinecap="round"
         strokeLinejoin="round"
     >
-        <circle cx="12" cy="12" r="8" />
-        <path d="M9 10h.01" />
-        <path d="M15 10h.01" />
-        <path d="M9 15c.7 1 1.8 1.6 3 1.6s2.3-.6 3-1.6" />
+        <circle cx="12" cy="12" r="9" />
+        {/* Eyes — filled dots via short strokes with round cap */}
+        <path d="M9 10.5v.01" strokeWidth={2.2} />
+        <path d="M15 10.5v.01" strokeWidth={2.2} />
+        {/* Smile — proper arc */}
+        <path d="M8.5 14.5a5 5 0 0 0 7 0" />
     </svg>
 );
 
@@ -101,15 +112,17 @@ const GlobeIcon = ({ className }: { className?: string }) => (
         className={className}
         fill="none"
         stroke="currentColor"
-        strokeWidth={1.7}
+        strokeWidth={1.6}
         strokeLinecap="round"
         strokeLinejoin="round"
     >
         <circle cx="12" cy="12" r="9" />
-        <ellipse cx="12" cy="12" rx="4" ry="9" />
-        <path d="M3 12h18" />
-        <path d="M5 7.5h14" />
-        <path d="M5 16.5h14" />
+        {/* Vertical meridian ellipse */}
+        <path d="M12 3c-2.4 4-2.4 14 0 18" />
+        <path d="M12 3c2.4 4 2.4 14 0 18" />
+        {/* Latitude lines */}
+        <path d="M3.5 9h17" />
+        <path d="M3.5 15h17" />
     </svg>
 );
 
@@ -119,14 +132,17 @@ const UptimeIcon = ({ className }: { className?: string }) => (
         className={className}
         fill="none"
         stroke="currentColor"
-        strokeWidth={1.7}
+        strokeWidth={1.6}
         strokeLinecap="round"
         strokeLinejoin="round"
     >
-        <circle cx="12" cy="12" r="8" />
-        <path d="M12 8v4l2.5 2" />
-        <path d="M4 4l2 2" />
-        <path d="M20 4l-2 2" />
+        <circle cx="12" cy="13" r="8" />
+        {/* Clock hands */}
+        <path d="M12 9v4l2.5 2.5" />
+        {/* Top decorative tick marks indicating uptime/live */}
+        <path d="M4.93 4.93l1.06 1.06" />
+        <path d="M19.07 4.93l-1.06 1.06" />
+        <path d="M12 2v2" />
     </svg>
 );
 
@@ -136,19 +152,17 @@ const InnovationIcon = ({ className }: { className?: string }) => (
         className={className}
         fill="none"
         stroke="currentColor"
-        strokeWidth={1.7}
+        strokeWidth={1.6}
         strokeLinecap="round"
         strokeLinejoin="round"
     >
+        {/* Bulb head — proper arc */}
         <path d="M9 18h6" />
         <path d="M10 21h4" />
-        <path d="M9 10a3 3 0 0 1 6 0c0 1.5-.7 2.3-1.4 3.1-.5.6-.6 1-.6 1.9v.5" />
-        <path d="M8 4l1 1" />
-        <path d="M16 4l-1 1" />
-        <path d="M5 10h1" />
-        <path d="M18 10h1" />
-        <path d="M6.5 6.5l.7.7" />
-        <path d="M17.5 6.5l-.7.7" />
+        {/* Bulb body — smooth teardrop from base */}
+        <path d="M12 3a6 6 0 0 1 4.24 10.24C15.4 14.1 15 14.9 15 16H9c0-1.1-.4-1.9-1.24-2.76A6 6 0 0 1 12 3Z" />
+        {/* Inner filament hint */}
+        <path d="M12 7v3" strokeWidth={1.2} />
     </svg>
 );
 
@@ -158,13 +172,15 @@ const ExcellenceIcon = ({ className }: { className?: string }) => (
         className={className}
         fill="none"
         stroke="currentColor"
-        strokeWidth={1.7}
+        strokeWidth={1.6}
         strokeLinecap="round"
         strokeLinejoin="round"
     >
-        <path d="M12 3 9.5 8l-5 .7 3.6 3.5-.9 4.9L12 15l4.8 2.1-.9-4.9 3.6-3.5-5-.7z" />
-        <path d="M8.5 20.5 7 22" />
-        <path d="M15.5 20.5 17 22" />
+        {/* 5-point star — precise geometry */}
+        <path d="M12 2l2.63 5.33 5.87.85-4.25 4.14 1 5.84L12 15.4l-5.25 2.76 1-5.84L3.5 8.18l5.87-.85z" />
+        {/* Ribbon tails */}
+        <path d="M9 19.5 7.5 22" />
+        <path d="M15 19.5 16.5 22" />
     </svg>
 );
 
@@ -174,12 +190,16 @@ const IntegrityIcon = ({ className }: { className?: string }) => (
         className={className}
         fill="none"
         stroke="currentColor"
-        strokeWidth={1.7}
+        strokeWidth={1.6}
         strokeLinecap="round"
         strokeLinejoin="round"
     >
-        <path d="M6 12l3 3 9-9" />
-        <rect x="3.5" y="4.5" width="17" height="15" rx="2" />
+        {/* Document/clipboard base */}
+        <rect x="4" y="4" width="16" height="17" rx="2" />
+        {/* Checkmark — optically centered in document */}
+        <path d="M8.5 12.5l2.5 2.5 4.5-5" />
+        {/* Top rule line for document feel */}
+        <path d="M8 8h8" strokeWidth={1.2} />
     </svg>
 );
 
@@ -189,15 +209,19 @@ const CustomerIcon = ({ className }: { className?: string }) => (
         className={className}
         fill="none"
         stroke="currentColor"
-        strokeWidth={1.7}
+        strokeWidth={1.6}
         strokeLinecap="round"
         strokeLinejoin="round"
     >
-        <circle cx="8" cy="9" r="2.5" />
-        <circle cx="16" cy="9" r="2.5" />
-        <path d="M4.5 17.5A3.5 3.5 0 0 1 8 15h0a3.5 3.5 0 0 1 3.5 2.5" />
-        <path d="M12.5 17.5A3.5 3.5 0 0 1 16 15h0a3.5 3.5 0 0 1 19.5 17.5" />
-        <path d="M12 11.5v0" />
+        {/* Primary user — centered, larger */}
+        <circle cx="12" cy="8" r="3" />
+        <path d="M6.5 19a5.5 5.5 0 0 1 11 0" />
+        {/* Secondary ghost user left */}
+        <circle cx="5" cy="10" r="2.2" />
+        <path d="M1.5 19a3.5 3.5 0 0 1 5.5-2.85" />
+        {/* Secondary ghost user right */}
+        <circle cx="19" cy="10" r="2.2" />
+        <path d="M22.5 19a3.5 3.5 0 0 0-5.5-2.85" />
     </svg>
 );
 
@@ -207,15 +231,17 @@ const CollaborationIcon = ({ className }: { className?: string }) => (
         className={className}
         fill="none"
         stroke="currentColor"
-        strokeWidth={1.7}
+        strokeWidth={1.6}
         strokeLinecap="round"
         strokeLinejoin="round"
     >
-        <circle cx="7" cy="9" r="2.5" />
-        <circle cx="17" cy="9" r="2.5" />
-        <path d="M4.5 17.5A3.5 3.5 0 0 1 8 15h0a3.5 3.5 0 0 1 11.5 17.5" />
-        <path d="M12.5 17.5A3.5 3.5 0 0 1 16 15h0a3.5 3.5 0 0 1 19.5 17.5" />
-        <path d="M10 11h4" />
+        {/* Two equal people side by side */}
+        <circle cx="8" cy="8" r="2.8" />
+        <path d="M2.5 19a5.5 5.5 0 0 1 11 0" />
+        <circle cx="16" cy="8" r="2.8" />
+        <path d="M10.5 19a5.5 5.5 0 0 1 11 0" />
+        {/* Connection bridge — link between them */}
+        <path d="M11 9.5h2" strokeWidth={1.3} />
     </svg>
 );
 
@@ -225,12 +251,14 @@ const ShieldIcon = ({ className }: { className?: string }) => (
         className={className}
         fill="none"
         stroke="currentColor"
-        strokeWidth={1.7}
+        strokeWidth={1.6}
         strokeLinecap="round"
         strokeLinejoin="round"
     >
-        <path d="M12 3 5 6v6c0 4.1 2.6 6.9 7 9 4.4-2.1 7-4.9 7-9V6l-7-3Z" />
-        <path d="M9.5 12.5 11 14l3.5-3.5" />
+        {/* Shield — symmetrical, properly tapered */}
+        <path d="M12 2.5 4 6v5.5c0 4.52 3.4 8.75 8 9.5 4.6-.75 8-4.98 8-9.5V6z" />
+        {/* Check inside — optically centered */}
+        <path d="M9 12l2 2 4-4" />
     </svg>
 );
 
@@ -612,67 +640,67 @@ export default function AboutPage() {
             </div>
 
             {/* Team Section */}
-            <section className="py-20 bg-white">
-                <div className="container px-4 mx-auto">
-                    <div className="flex flex-wrap justify-center mb-12 text-center">
-                        <div className="w-full px-4 lg:w-8/12">
-                            <h2 className="text-4xl font-semibold text-gray-800">
-                                Meet Our Team
-                            </h2>
-                            <p className="mt-4 text-lg text-gray-600">
-                                The talented individuals behind AutiSync&apos;s success
-                            </p>
-                        </div>
-                    </div>
+            {/*<section className="py-20 bg-white">*/}
+            {/*    <div className="container px-4 mx-auto">*/}
+            {/*        <div className="flex flex-wrap justify-center mb-12 text-center">*/}
+            {/*            <div className="w-full px-4 lg:w-8/12">*/}
+            {/*                <h2 className="text-4xl font-semibold text-gray-800">*/}
+            {/*                    Meet Our Team*/}
+            {/*                </h2>*/}
+            {/*                <p className="mt-4 text-lg text-gray-600">*/}
+            {/*                    The talented individuals behind AutiSync&apos;s success*/}
+            {/*                </p>*/}
+            {/*            </div>*/}
+            {/*        </div>*/}
 
-                    <div className="flex flex-wrap justify-center">
-                        {[
-                            {
-                                name: "Helio Garcia",
-                                role: "Chief Marketing Strategist",
-                                img: "https://media.tenor.com/b67Xti8TUp8AAAAi/kakyoin-stand-anime.gif",
-                            },
-                            {
-                                name: "Augusto Vieira",
-                                role: "Project & Business Operations Lead",
-                                img: "https://media.tenor.com/8KYu56w12M4AAAAi/detective-conan-okay.gif",
-                            },
-                            {
-                                name: "Mauro Sousa",
-                                role: "CTO",
-                                img: "https://media1.tenor.com/m/y3EYCROMmqYAAAAC/dadnaruto-anime.gif",
-                            },
-                            {
-                                name: "Katiana Poli",
-                                role: "Marketing Director",
-                                img: "https://media1.tenor.com/m/GcHGPM7wmaoAAAAC/aaaaaaaaaaaaaa.gif",
-                            },
-                        ].map((member) => (
-                            <div
-                                key={member.name}
-                                className="w-full px-4 mb-12 md:w-6/12 lg:w-3/12"
-                            >
-                                <div className="px-6 text-center transition-all duration-300 ease-out transform hover:-translate-y-2 hover:shadow-[0_18px_35px_rgba(0,0,0,0.18)] rounded-xl bg-white/80">
-                                    <img
-                                        alt="Team member"
-                                        src={member.img}
-                                        className="max-w-full mx-auto rounded-full"
-                                        style={{ maxWidth: "200px" }}
-                                    />
-                                    <div className="pt-6 text-center">
-                                        <h5 className="text-xl font-semibold text-gray-900">
-                                            {member.name}
-                                        </h5>
-                                        <p className="mt-1 text-sm text-gray-500 uppercase">
-                                            {member.role}
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
+            {/*        <div className="flex flex-wrap justify-center">*/}
+            {/*            {[*/}
+            {/*                {*/}
+            {/*                    name: "Helio Garcia",*/}
+            {/*                    role: "Chief Marketing Strategist",*/}
+            {/*                    img: "https://media.tenor.com/b67Xti8TUp8AAAAi/kakyoin-stand-anime.gif",*/}
+            {/*                },*/}
+            {/*                {*/}
+            {/*                    name: "Augusto Vieira",*/}
+            {/*                    role: "Project & Business Operations Lead",*/}
+            {/*                    img: "https://media.tenor.com/8KYu56w12M4AAAAi/detective-conan-okay.gif",*/}
+            {/*                },*/}
+            {/*                {*/}
+            {/*                    name: "Mauro Sousa",*/}
+            {/*                    role: "CTO",*/}
+            {/*                    img: "https://media1.tenor.com/m/y3EYCROMmqYAAAAC/dadnaruto-anime.gif",*/}
+            {/*                },*/}
+            {/*                {*/}
+            {/*                    name: "Katiana Poli",*/}
+            {/*                    role: "Marketing Director",*/}
+            {/*                    img: "https://media1.tenor.com/m/GcHGPM7wmaoAAAAC/aaaaaaaaaaaaaa.gif",*/}
+            {/*                },*/}
+            {/*            ].map((member) => (*/}
+            {/*                <div*/}
+            {/*                    key={member.name}*/}
+            {/*                    className="w-full px-4 mb-12 md:w-6/12 lg:w-3/12"*/}
+            {/*                >*/}
+            {/*                    <div className="px-6 text-center transition-all duration-300 ease-out transform hover:-translate-y-2 hover:shadow-[0_18px_35px_rgba(0,0,0,0.18)] rounded-xl bg-white/80">*/}
+            {/*                        <img*/}
+            {/*                            alt="Team member"*/}
+            {/*                            src={member.img}*/}
+            {/*                            className="max-w-full mx-auto rounded-full"*/}
+            {/*                            style={{ maxWidth: "200px" }}*/}
+            {/*                        />*/}
+            {/*                        <div className="pt-6 text-center">*/}
+            {/*                            <h5 className="text-xl font-semibold text-gray-900">*/}
+            {/*                                {member.name}*/}
+            {/*                            </h5>*/}
+            {/*                            <p className="mt-1 text-sm text-gray-500 uppercase">*/}
+            {/*                                {member.role}*/}
+            {/*                            </p>*/}
+            {/*                        </div>*/}
+            {/*                    </div>*/}
+            {/*                </div>*/}
+            {/*            ))}*/}
+            {/*        </div>*/}
+            {/*    </div>*/}
+            {/*</section>*/}
 
             {/* CTA Section */}
             <section className="py-20 pb-40 bg-white">
